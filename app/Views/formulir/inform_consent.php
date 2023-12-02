@@ -102,6 +102,7 @@
     <table class="table table-bordered">
       <tr>
         <td align="right">
+          <p>ppp</p>
 
           <img src="<?= base_url('uploads/gambar.jpg') ?>" alt="Gambar" width="55px" height="74px">
 
