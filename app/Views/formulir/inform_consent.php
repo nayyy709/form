@@ -1,3 +1,17 @@
+<?php
+$db = db_connect();
+
+foreach ($dataAssessmentform3 as $row) {
+  echo $row->BODY_ID;
+  echo $row->ORG_UNIT_CODE;
+  echo $row->NO_REGISTRATION;
+  echo $row->VISIT_ID;
+};
+?>
+
+<?= $this->extend('halaman_utama') ?>
+<?= $this->section('content') ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -102,7 +116,6 @@
     <table class="table table-bordered">
       <tr>
         <td align="right">
-          <p>ppp</p>
 
           <img src="<?= base_url('uploads/gambar.jpg') ?>" alt="Gambar" width="55px" height="74px">
 
@@ -317,3 +330,5 @@
 </body>
 
 </html>
+
+<?= $this->endSection() ?>

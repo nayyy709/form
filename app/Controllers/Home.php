@@ -2,26 +2,64 @@
 
 namespace App\Controllers;
 
+use App\Models\Assessment_model;
+
+
+
 class Home extends BaseController
 {
+    protected $mdata;
+    public function __construct()
+    {
+        $this->mdata = new Assessment_model();
+    }
+
     public function index(): string
     {
         return view('halaman_utama');
     }
     public function form1(): string
     {
-        return view('formulir/form_persetujuan_tindakan');
+
+        $tampildata =  $this->mdata->tampildata();
+
+        $info = array(
+            'dataAssessmentform1' => $tampildata,
+        );
+
+        return view('formulir/form_persetujuan_tindakan', $info);
     }
     public function form2(): string
     {
-        return view('formulir/pengkajian_pra_bedah');
+
+        $tampildata =  $this->mdata->tampildata();
+
+        $info = array(
+            'dataAssessmentform2' => $tampildata,
+        );
+
+        return view('formulir/pengkajian_pra_bedah', $info);
     }
     public function form3(): string
     {
-        return view('formulir/inform_consent');
+
+        $tampildata =  $this->mdata->tampildata();
+
+        $info = array(
+            'dataAssessmentform3' => $tampildata,
+        );
+
+        return view('formulir/inform_consent', $info);
     }
     public function form4(): string
     {
-        return view('formulir/pengkajian_awal_keperawatan_dan_medis_pasien_rawat_inap_dewasa');
+
+        $tampildata =  $this->mdata->tampildata();
+
+        $info = array(
+            'dataAssessmentform4' => $tampildata,
+        );
+
+        return view('formulir/pengkajian_awal_keperawatan_dan_medis_pasien_rawat_inap_dewasa', $info);
     }
 }

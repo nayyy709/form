@@ -1,3 +1,17 @@
+<?php
+$db = db_connect();
+
+foreach ($dataAssessmentform4 as $row) {
+  echo $row->BODY_ID;
+  echo $row->ORG_UNIT_CODE;
+  echo $row->NO_REGISTRATION;
+  echo $row->VISIT_ID;
+};
+?>
+
+<?= $this->extend('halaman_utama') ?>
+<?= $this->section('content') ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -1461,6 +1475,12 @@
         }
       })
     })
+  </script>
+
+  <script>
+    $("#tension_upper, #tensiom_bellow, #height, #weight, #nadi, #nafas, #temprature, #head").keydown(function(e) {
+      !0 == e.shiftKey && e.preventDefault(), e.keyCode >= 48 && e.keyCode <= 57 || e.keyCode >= 96 && e.keyCode <= 105 || 8 == e.keyCode || 9 == e.keyCode || 37 == e.keyCode || 39 == e.keyCode || 46 == e.keyCode || 190 == e.keyCode || e.preventDefault(), -1 !== $(this).val().indexOf(".") && 190 == e.keyCode && e.preventDefault()
+    });
   </script>
 
 
@@ -5511,4 +5531,4 @@
 
 </html>
 
-</html>
+<?= $this->endSection() ?>

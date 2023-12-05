@@ -1,3 +1,16 @@
+<?php
+$db = db_connect();
+
+foreach ($dataAssessmentform2 as $row) {
+  echo $row->BODY_ID;
+  echo $row->ORG_UNIT_CODE;
+  echo $row->NO_REGISTRATION;
+  echo $row->VISIT_ID;
+};
+?>
+<?= $this->extend('halaman_utama') ?>
+<?= $this->section('content') ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -340,3 +353,5 @@
 </body>
 
 </html>
+
+<?= $this->endSection() ?>

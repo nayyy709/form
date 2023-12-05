@@ -1,3 +1,17 @@
+<?php
+$db = db_connect();
+
+foreach ($dataAssessmentform1 as $row) {
+  echo $row->BODY_ID;
+  echo $row->ORG_UNIT_CODE;
+  echo $row->NO_REGISTRATION;
+  echo $row->VISIT_ID;
+};
+?>
+
+<?= $this->extend('halaman_utama') ?>
+<?= $this->section('content') ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -25,6 +39,7 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="<?= base_url('js/jquery.signature.js') ?>"></script>
+
   <script>
     $(function() {
       var sig = $('#sig').signature();
@@ -681,3 +696,12 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+<?= $this->endSection() ?>

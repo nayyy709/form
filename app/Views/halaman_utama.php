@@ -7,14 +7,16 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Top navbar example · Bootstrap v5.0</title>
+    <title>Formulir</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-static/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sidebars/">
 
 
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -43,38 +45,42 @@
 
 
     <!-- Custom styles for this template -->
+
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Top navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+    <?= $this->include('navbar') ?>
+    <?= $this->renderSection('content') ?>
+
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="container mt-5">
+
+        <div class="row align-items-center">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="<?= base_url('uploads/formicon.png') ?>" class="card-img-top" alt="" width="159px" height="221px">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center;">Form Persetujuan Tindakan Kedokteran</h5>
+                        <a href="<?= site_url('home/form1') ?>" class="btn btn-primary">Go to Form 1</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="<?= base_url('uploads/formicon.png') ?>" class="card-img-top" alt="" width="159px" height="221px">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center;">Form Pengkajian Pra Bedah</h5>
+                        <a href="<?= site_url('home/form2') ?>" class="btn btn-primary">Go to Form 2</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
+    </div>
 
 
-    <img src="<?= base_url('uploads/gambar.jpg') ?>" alt="Gambar">
+
 
 
 
