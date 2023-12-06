@@ -28,20 +28,12 @@
 
 
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+        h5 {
+            font-size: 20px;
         }
     </style>
+
+
 
 
     <!-- Custom styles for this template -->
@@ -53,26 +45,56 @@
     <?= $this->include('navbar') ?>
     <?= $this->renderSection('content') ?>
 
+
     <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
 
-    <div class="container mt-5">
+    <div class="container mt-5" style="margin: auto;">
 
         <div class="row align-items-center">
-            <div class="col-4">
-                <div class="card" style="width: 18rem;">
+            <div class="col-md-3">
+                <div class="card" style="width: 15rem;" align="center">
                     <img src="<?= base_url('uploads/formicon.png') ?>" class="card-img-top" alt="" width="159px" height="221px">
                     <div class="card-body">
-                        <h5 class="card-title" style="text-align: center;">Form Persetujuan Tindakan Kedokteran</h5>
-                        <a href="<?= site_url('home/form1') ?>" class="btn btn-primary">Go to Form 1</a>
+                        <h5 class="card-title">Form Persetujuan Tindakan Kedokteran</h5>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="<?= site_url('home/form1') ?>" class="btn btn-dark">Go to Form 1</a>
                     </div>
                 </div>
             </div>
-            <div class="col-4">
-                <div class="card" style="width: 18rem;">
+            <div class="col-md-3">
+                <div class="card" style="width: 15rem;" align="center">
                     <img src="<?= base_url('uploads/formicon.png') ?>" class="card-img-top" alt="" width="159px" height="221px">
                     <div class="card-body">
-                        <h5 class="card-title" style="text-align: center;">Form Pengkajian Pra Bedah</h5>
-                        <a href="<?= site_url('home/form2') ?>" class="btn btn-primary">Go to Form 2</a>
+                        <h5 class="card-title">Form Pengkajian Pra Bedah</h5>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="<?= site_url('home/form2') ?>" class="btn btn-dark ">Go to Form 2</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 15rem;" align="center">
+                    <img src="<?= base_url('uploads/formicon.png') ?>" class="card-img-top" alt="" width="159px" height="221px">
+                    <div class="card-body">
+                        <h5 class="card-title">Infrom Consent</h5>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="<?= site_url('home/form3') ?>" class="btn btn-dark ">Go to Form 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 15rem;" align="center">
+                    <img src="<?= base_url('uploads/formicon.png') ?>" class="card-img-top" alt="" width="159px" height="221px">
+                    <div class="card-body">
+                        <h5 class="card-title">Form Pengkajian Awal Keperawatan dan Medis Pasien Rawat Inap Dewasa</h5>
+                        <br>
+                        <a href="<?= site_url('home/form4') ?>" class="btn btn-dark ">Go to Form 4</a>
                     </div>
                 </div>
             </div>

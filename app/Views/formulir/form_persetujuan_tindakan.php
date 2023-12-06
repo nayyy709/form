@@ -2,15 +2,10 @@
 $db = db_connect();
 
 foreach ($dataAssessmentform1 as $row) {
-  echo $row->BODY_ID;
-  echo $row->ORG_UNIT_CODE;
-  echo $row->NO_REGISTRATION;
-  echo $row->VISIT_ID;
 };
 ?>
 
-<?= $this->extend('halaman_utama') ?>
-<?= $this->section('content') ?>
+
 
 <!doctype html>
 <html lang="en">
@@ -22,7 +17,7 @@ foreach ($dataAssessmentform1 as $row) {
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Formulir Persetujuan Tindakan Kedokteran</title>
 
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
@@ -124,12 +119,37 @@ foreach ($dataAssessmentform1 as $row) {
     });
   </script>
 
+  <style>
+    .btn {
+      background-color: black;
+      /* Blue background */
+      border: none;
+      /* Remove borders */
+      color: white;
+      /* White text */
+      padding: 12px 16px;
+      /* Some padding */
+      font-size: 16px;
+      /* Set a font size */
+      cursor: pointer;
+      /* Mouse pointer on hover */
+    }
+
+    /* Darker background on mouse-over */
+    .btn:hover {
+      background-color: RoyalBlue;
+    }
+  </style>
+
+
 </head>
 
 <body>
 
 
+
   <div class="container mt-3">
+    <a class="btn" href="<?= site_url('home/index') ?>"><i class="fa fa-arrow-left"></i></a>
     <div style="text-align: right;">
       <h2>RM 08</h2>
     </div>
@@ -153,7 +173,7 @@ foreach ($dataAssessmentform1 as $row) {
                 <label>No RM</label>
               </div>
               <div class="col-7">
-                <input class="form-control" type="text" name="no_Registration" id="no_Registration" readonly>
+                <input class="form-control" type="text" name="no_Registration" id="no_Registration" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
               </div>
             </div>
 
@@ -162,7 +182,7 @@ foreach ($dataAssessmentform1 as $row) {
                 <label>Nama Lengkap</label>
               </div>
               <div class="col-7">
-                <input class="form-control" type="text" name="thename" id="thename" readonly>
+                <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $row->THENAME; ?>" readonly>
               </div>
             </div>
 
@@ -171,13 +191,13 @@ foreach ($dataAssessmentform1 as $row) {
                 <label>Tanggal Lahir</label>
               </div>
               <div class="col-3">
-                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" readonly>
+                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $row->DATE_OF_BIRTH; ?>" readonly>
               </div>
               <div class="col-md-1">
                 <label>Umur</label>
               </div>
               <div class="col-3">
-                <input class="form-control" type="text" name="ageyear" id="ageyear" readonly>
+                <input class="form-control" type="text" name="ageyear" id="ageyear" value="<?php echo $row->AGEYEAR; ?> T <?php echo $row->AGEMONTH ?> M <?php echo $row->AGEDAY ?> D " readonly>
               </div>
             </div>
 
@@ -185,14 +205,9 @@ foreach ($dataAssessmentform1 as $row) {
               <div class="col-5">
                 <label>Jenis Kelamin</label><br>
               </div>
-              <div class="col-7">
-                <div class="form-check-inline">
-                  <input type="radio" class="form-check-input" name="gender" id="gender" value="laki">
-                  <label class="form-check-label" for="gender">Laki-laki</label>
-                </div>
-                <div class="form-check-inline">
-                  <input type="radio" class="form-check-input" name="gender" id="gender" value="perempuan">
-                  <label class="form-check-label" for="gender">Perempuan</label>
+              <div class="col-1">
+                <div class="form-input">
+                  <input type="text" class="form-control" name="gender" id="gender" value="<?php echo $row->GENDER; ?>" readonly>
                 </div>
               </div>
             </div>
@@ -202,7 +217,7 @@ foreach ($dataAssessmentform1 as $row) {
                 <label>Alamat</label>
               </div>
               <div class="col-7">
-                <textarea class="form-control" name="theaddress" id="theaddress" cols="6" rows="2" readonly></textarea>
+                <textarea class="form-control" name="theaddress" id="theaddress" cols="6" rows="2" readonly> <?php echo $row->THEADDRESS; ?></textarea>
               </div>
             </div>
 
@@ -220,7 +235,7 @@ foreach ($dataAssessmentform1 as $row) {
                 <label>Ruangan</label>
               </div>
               <div class="col-7">
-                <input class="form-control" type="text" name="v_07" id="v_07">
+                <input class="form-control" type="text" name="class_room_id" id="class_room_id" value="<?php echo $row->CLASS_ROOM_ID; ?>" readonly>
               </div>
             </div>
 
@@ -229,7 +244,7 @@ foreach ($dataAssessmentform1 as $row) {
                 <label>Tanggal dan Pukul</label>
               </div>
               <div class="col-4">
-                <input class="form-control" type="datetime-local" name="examination_date" id="examination_date" readonly>
+                <input class="form-control" type="datetime-local" name="examination_date" id="examination_date" value="<?php echo $row->EXAMINATION_DATE; ?>" readonly>
               </div>
             </div>
 
@@ -677,31 +692,26 @@ foreach ($dataAssessmentform1 as $row) {
       </table>
 
     </div>
-
-
+    <div class="mb-3">
+      <a class="btn form-control"><i class="fa fa-save"></i> SAVE</a>
+    </div>
     </form>
-  </div>
 
 
-  <!-- Optional JavaScript; choose one of the two! -->
 
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-  <!-- Option 2: Separate Popper and Bootstrap JS -->
-  <!--
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-<?= $this->endSection() ?>

@@ -2,15 +2,10 @@
 $db = db_connect();
 
 foreach ($dataAssessmentform3 as $row) {
-  echo $row->BODY_ID;
-  echo $row->ORG_UNIT_CODE;
-  echo $row->NO_REGISTRATION;
-  echo $row->VISIT_ID;
 };
 ?>
 
-<?= $this->extend('halaman_utama') ?>
-<?= $this->section('content') ?>
+
 
 <!doctype html>
 <html lang="en">
@@ -22,7 +17,7 @@ foreach ($dataAssessmentform3 as $row) {
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Inform Consent</title>
 
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
@@ -108,55 +103,79 @@ foreach ($dataAssessmentform3 as $row) {
       font-size: 10px;
     }
   </style>
+
+  <style>
+    .btn {
+      background-color: black;
+      /* Blue background */
+      border: none;
+      /* Remove borders */
+      color: white;
+      /* White text */
+      padding: 12px 16px;
+      /* Some padding */
+      font-size: 16px;
+      /* Set a font size */
+      cursor: pointer;
+      /* Mouse pointer on hover */
+    }
+
+    /* Darker background on mouse-over */
+    .btn:hover {
+      background-color: RoyalBlue;
+    }
+  </style>
 </head>
 
 <body>
 
   <div class="container mt-5">
-    <table class="table table-bordered">
-      <tr>
-        <td align="right">
+    <a class="btn mb-5" href="<?= site_url('home/index') ?>"><i class="fa fa-arrow-left"></i></a>
+    <form>
+      <table class="table table-bordered">
+        <tr>
+          <td align="right">
 
-          <img src="<?= base_url('uploads/gambar.jpg') ?>" alt="Gambar" width="55px" height="74px">
+            <img src="<?= base_url('uploads/gambar.jpg') ?>" alt="Gambar" width="55px" height="74px">
 
-        </td>
-
-        <td>
-          <h1><b>RSUD Dr.M.Yunus Bengkulu</b></h1>
-          <h2><b>Badan Layanan Umum Daerah</b></h2>
-          <p>Jl. Bhayangkara Bengkulu 38229 Telp. (0736) 52004 – 52006 Fax (0736) 52007</p>
-        </td>
-        <form>
-          <td>
-            <div class=" row">
-              <div class="col-4">
-                <label>No.MR:</label>
-              </div>
-              <div class="col-8">
-                <input class="form-control" type="text" name="no_Registration" id="no_Registration" placeholder="No.MR" readonly>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-4">
-                <label>Nama Lengkap</label>
-              </div>
-              <div class="col-8">
-                <input class="form-control" type="text" name="thename " id="thename  " placeholder="Nama Lengkap" readonly>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-4">
-                <label>Tanggal Lahir</label>
-              </div>
-              <div class="col-8">
-                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" readonly>
-              </div>
-            </div>
           </td>
-      </tr>
-      </form>
+
+          <td>
+            <h1><b>RSUD Dr.M.Yunus Bengkulu</b></h1>
+            <h2><b>Badan Layanan Umum Daerah</b></h2>
+            <p>Jl. Bhayangkara Bengkulu 38229 Telp. (0736) 52004 – 52006 Fax (0736) 52007</p>
+          </td>
+          <form>
+            <td>
+              <div class=" row">
+                <div class="col-4">
+                  <label>No.MR:</label>
+                </div>
+                <div class="col-8">
+                  <input class="form-control" type="text" name="no_Registration" id="no_Registration" placeholder="No.MR" value="<?php echo $row->NO_REGISTRATION ?>" readonly>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-4">
+                  <label>Nama Lengkap</label>
+                </div>
+                <div class="col-8">
+                  <input class="form-control" type="text" name="thename " id="thename  " placeholder="Nama Lengkap" value="<?php echo $row->THENAME ?>" readonly>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-4">
+                  <label>Tanggal Lahir</label>
+                </div>
+                <div class="col-8">
+                  <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $row->DATE_OF_BIRTH ?>" readonly>
+                </div>
+              </div>
+            </td>
+        </tr>
+    </form>
     </table>
 
     <table class="table table-bordered" style="border: 2px solid black;">
@@ -303,7 +322,10 @@ foreach ($dataAssessmentform3 as $row) {
         </td>
       </tr>
     </table>
-
+    </form>
+    <div class="mb-3">
+      <a class="btn form-control"><i class="fa fa-save"></i> SAVE</a>
+    </div>
   </div>
 
 
@@ -330,5 +352,3 @@ foreach ($dataAssessmentform3 as $row) {
 </body>
 
 </html>
-
-<?= $this->endSection() ?>

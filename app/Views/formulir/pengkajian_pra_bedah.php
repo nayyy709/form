@@ -2,14 +2,9 @@
 $db = db_connect();
 
 foreach ($dataAssessmentform2 as $row) {
-  echo $row->BODY_ID;
-  echo $row->ORG_UNIT_CODE;
-  echo $row->NO_REGISTRATION;
-  echo $row->VISIT_ID;
 };
 ?>
-<?= $this->extend('halaman_utama') ?>
-<?= $this->section('content') ?>
+
 
 <!doctype html>
 <html lang="en">
@@ -21,7 +16,7 @@ foreach ($dataAssessmentform2 as $row) {
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Pengkajian Pra Pembedahan</title>
 
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
@@ -51,10 +46,33 @@ foreach ($dataAssessmentform2 as $row) {
       });
     });
   </script>
+
+  <style>
+    .btn {
+      background-color: black;
+      /* Blue background */
+      border: none;
+      /* Remove borders */
+      color: white;
+      /* White text */
+      padding: 12px 16px;
+      /* Some padding */
+      font-size: 16px;
+      /* Set a font size */
+      cursor: pointer;
+      /* Mouse pointer on hover */
+    }
+
+    /* Darker background on mouse-over */
+    .btn:hover {
+      background-color: RoyalBlue;
+    }
+  </style>
 </head>
 
 <body>
   <div class="container mt-3">
+    <a class="btn" href="<?= site_url('home/index') ?>"><i class="fa fa-arrow-left"></i></a>
     <div style="text-align: right;">
       <h2>RM 10</h2>
     </div>
@@ -73,7 +91,7 @@ foreach ($dataAssessmentform2 as $row) {
                 <label>No. RekamMedis :</label>
               </div>
               <div class="col-8">
-                <input class="form-control" type="text" name="no_Registration" id="no_Registration" readonly>
+                <input class="form-control" type="text" name="no_Registration" id="no_Registration" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
               </div>
             </div>
 
@@ -82,7 +100,7 @@ foreach ($dataAssessmentform2 as $row) {
                 <label>Nama Lengkap,(Nama Keluarga) :</label>
               </div>
               <div class="col-4">
-                <input class="form-control" type="text" name="thename" id="thename" readonly>
+                <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $row->THENAME; ?>" readonly>
               </div>
               <div class="col-3">
                 <input class="form-control" type="text" name="alloanamnesis_contact" id="alloanamnesis_contact" readonly>
@@ -94,17 +112,13 @@ foreach ($dataAssessmentform2 as $row) {
                 <label>Tanggal Lahir :</label>
               </div>
               <div class="col-3">
-                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" readonly>
+                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $row->DATE_OF_BIRTH; ?>" readonly>
               </div>
               <div class="col-2">
                 <label>JenisKelamin</label><br>
               </div>
-              <div class="col-2">
-                <select class="form-control" name="gender" id="gender" readonly>
-                  <option selected>Pilih</option>
-                  <option value="1">L</option>
-                  <option value="2">P</option>
-                </select>
+              <div class="col-1">
+                <input type="text" class="form-control" name="gender" id="gender" value="<?php echo $row->GENDER; ?>" readonly>
               </div>
             </div>
 
@@ -113,7 +127,7 @@ foreach ($dataAssessmentform2 as $row) {
                 <label>Ruangan :</label>
               </div>
               <div class="col-8">
-                <input class="form-control" type="text" name="v_06" id="v_06">
+                <input class="form-control" type="text" name="class_room_id" id="class_room_id" value="<?php echo $row->CLASS_ROOM_ID; ?>" readonly>
               </div>
             </div>
 
@@ -141,7 +155,7 @@ foreach ($dataAssessmentform2 as $row) {
             <label>1. Anamnesa (*)</label>
           </div>
           <div class="col-8">
-            <textarea class="form-control" name="v_07" id="v_07" cols="6" rows="2"></textarea>
+            <textarea class="form-control" name="anamnase" id="anamnase" cols="6" rows="2"></textarea>
           </div>
         </div>
 
@@ -336,6 +350,9 @@ foreach ($dataAssessmentform2 as $row) {
       </td>
     </tr>
   </table>
+  <div class="mb-3">
+    <a class="btn form-control"><i class="fa fa-save"></i> SAVE</a>
+  </div>
   </div>
 
 
@@ -353,5 +370,3 @@ foreach ($dataAssessmentform2 as $row) {
 </body>
 
 </html>
-
-<?= $this->endSection() ?>
