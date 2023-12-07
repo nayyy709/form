@@ -1,12 +1,3 @@
-<?php
-$db = db_connect();
-
-foreach ($dataAssessmentform1 as $row) {
-};
-?>
-
-
-
 <!doctype html>
 <html lang="en">
 
@@ -173,7 +164,7 @@ foreach ($dataAssessmentform1 as $row) {
                 <label>No RM</label>
               </div>
               <div class="col-7">
-                <input class="form-control" type="text" name="no_Registration" id="no_Registration" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
+                <input class="form-control" type="text" name="no_Registration" id="no_Registration" readonly>
               </div>
             </div>
 
@@ -182,7 +173,7 @@ foreach ($dataAssessmentform1 as $row) {
                 <label>Nama Lengkap</label>
               </div>
               <div class="col-7">
-                <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $row->THENAME; ?>" readonly>
+                <input class="form-control" type="text" name="thename" id="thename" readonly>
               </div>
             </div>
 
@@ -191,13 +182,13 @@ foreach ($dataAssessmentform1 as $row) {
                 <label>Tanggal Lahir</label>
               </div>
               <div class="col-3">
-                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $row->DATE_OF_BIRTH; ?>" readonly>
+                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" readonly>
               </div>
               <div class="col-md-1">
                 <label>Umur</label>
               </div>
               <div class="col-3">
-                <input class="form-control" type="text" name="ageyear" id="ageyear" value="<?php echo $row->AGEYEAR; ?> T <?php echo $row->AGEMONTH ?> M <?php echo $row->AGEDAY ?> D " readonly>
+                <input class="form-control" type="text" name="ageyear" id="ageyear" readonly>
               </div>
             </div>
 
@@ -207,7 +198,7 @@ foreach ($dataAssessmentform1 as $row) {
               </div>
               <div class="col-1">
                 <div class="form-input">
-                  <input type="text" class="form-control" name="gender" id="gender" value="<?php echo $row->GENDER; ?>" readonly>
+                  <input type="text" class="form-control" name="gender" id="gender" readonly>
                 </div>
               </div>
             </div>
@@ -217,7 +208,7 @@ foreach ($dataAssessmentform1 as $row) {
                 <label>Alamat</label>
               </div>
               <div class="col-7">
-                <textarea class="form-control" name="theaddress" id="theaddress" cols="6" rows="2" readonly> <?php echo $row->THEADDRESS; ?></textarea>
+                <textarea class="form-control" name="theaddress" id="theaddress" cols="6" rows="2" readonly></textarea>
               </div>
             </div>
 
@@ -235,7 +226,7 @@ foreach ($dataAssessmentform1 as $row) {
                 <label>Ruangan</label>
               </div>
               <div class="col-7">
-                <input class="form-control" type="text" name="class_room_id" id="class_room_id" value="<?php echo $row->CLASS_ROOM_ID; ?>" readonly>
+                <input class="form-control" type="text" name="class_room_id" id="class_room_id" readonly>
               </div>
             </div>
 
@@ -244,7 +235,7 @@ foreach ($dataAssessmentform1 as $row) {
                 <label>Tanggal dan Pukul</label>
               </div>
               <div class="col-4">
-                <input class="form-control" type="datetime-local" name="examination_date" id="examination_date" value="<?php echo $row->EXAMINATION_DATE; ?>" readonly>
+                <input class="form-control" type="datetime-local" name="examination_date" id="examination_date" readonly>
               </div>
             </div>
 

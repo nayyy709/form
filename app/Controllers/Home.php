@@ -2,64 +2,28 @@
 
 namespace App\Controllers;
 
-use App\Models\Assessment_model;
-
-
 
 class Home extends BaseController
 {
-    protected $mdata;
-    public function __construct()
-    {
-        $this->mdata = new Assessment_model();
-    }
 
-    public function index(): string
+    public function index()
     {
         return view('halaman_utama');
     }
-    public function form1(): string
+    public function form1()
     {
-
-        $tampildata =  $this->mdata->tampildata();
-
-        $info = array(
-            'dataAssessmentform1' => $tampildata,
-        );
-
-        return view('formulir/form_persetujuan_tindakan', $info);
+        return view('formulir/form_persetujuan_tindakan');
     }
-    public function form2(): string
+    public function form2()
     {
-
-        $tampildata =  $this->mdata->tampildata();
-
-        $info = array(
-            'dataAssessmentform2' => $tampildata,
-        );
-
-        return view('formulir/pengkajian_pra_bedah', $info);
+        return view('formulir/pengkajian_pra_bedah');
     }
-    public function form3(): string
+    public function form3()
     {
-
-        $tampildata =  $this->mdata->tampildata();
-
-        $info = array(
-            'dataAssessmentform3' => $tampildata,
-        );
-
-        return view('formulir/inform_consent', $info);
+        return view('formulir/inform_consent');
     }
-    public function form4(): string
+    public function form4()
     {
-
-        $tampildata =  $this->mdata->tampildata();
-
-        $info = array(
-            'dataAssessmentform4' => $tampildata,
-        );
-
-        return view('formulir/pengkajian_awal_keperawatan_dan_medis_pasien_rawat_inap_dewasa', $info);
+        return view('formulir/pengkajian_awal_keperawatan_dan_medis_pasien_rawat_inap_dewasa');
     }
 }
