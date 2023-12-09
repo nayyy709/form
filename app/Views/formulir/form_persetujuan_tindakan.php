@@ -26,6 +26,7 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="<?= base_url('js/jquery.signature.js') ?>"></script>
 
+  <!-- Signature1 Function -->
   <script>
     $(function() {
       var sig = $('#sig').signature();
@@ -39,7 +40,7 @@
       });
     });
   </script>
-
+  <!-- Signature2 Function -->
   <script>
     $(function() {
       var sig = $('#sig1').signature();
@@ -53,7 +54,7 @@
       });
     });
   </script>
-
+  <!-- Signature3 Function -->
   <script>
     $(function() {
       var sig = $('#sig2').signature();
@@ -67,7 +68,7 @@
       });
     });
   </script>
-
+  <!-- Signature4 Function -->
   <script>
     $(function() {
       var sig = $('#sig3').signature();
@@ -81,7 +82,7 @@
       });
     });
   </script>
-
+  <!-- Signature5 Function -->
   <script>
     $(function() {
       var sig = $('#sig4').signature();
@@ -95,7 +96,7 @@
       });
     });
   </script>
-
+  <!-- Signature6 Function -->
   <script>
     $(function() {
       var sig = $('#sig5').signature();
@@ -109,7 +110,7 @@
       });
     });
   </script>
-
+  <!-- Style btn submit & back -->
   <style>
     .btn {
       background-color: black;
@@ -131,15 +132,43 @@
       background-color: RoyalBlue;
     }
   </style>
+  <!-- function1 -->
+  <script type="text/javascript">
+    $(function f1() {
+      $("input[name='t_020']").click(function f1() {
+        if ($("#t_020_atau").is(":checked")) {
+          $("#v_23").removeAttr("disabled");
+          $("#v_24").removeAttr("disabled");
+          $("#t_021").removeAttr("disabled");
+          $("#t_022_lk").removeAttr("disabled");
+          $("#t_022_pr").removeAttr("disabled");
+          $("#v_25").removeAttr("disabled");
+          $("#v_23").focus();
+        } else {
+          $("#t_022_lk").attr("disabled", true);
+          $("#t_022_lk").prop("checked", false);
+          $("#t_022_pr").attr("disabled", true);
+          $("#t_022_pr").prop("checked", false);
+          $("#v_23").attr("disabled", true);
+          $("#v_23").val("");
+          $("#v_24").attr("disabled", true);
+          $("#v_24").val("");
+          $("#v_25").attr("disabled", true);
+          $("#v_25").val("");
+          $("#t_021").attr("disabled", true);
+          $("#t_021").val("");
 
-
+        }
+      });
+    });
+  </script>
 </head>
 
 <body>
 
-
-
   <div class="container mt-3">
+    <?php foreach ($dataAssessmentform1 as $row) {
+    }; ?>
     <a class="btn" href="<?= site_url('home/index') ?>"><i class="fa fa-arrow-left"></i></a>
     <div style="text-align: right;">
       <h2>RM 08</h2>
@@ -153,18 +182,17 @@
           <br>
           <br>
           <br>
-
-
           <h2 class="text-center mb-5">FORMULIR PERSETUJUAN TINDAKAN DOKTER</h2>
         </td>
-        <form>
+
+        <form action="<?= site_url('addform/add_aksi') ?>" method="post">
           <td width="60%">
             <div class="row">
               <div class="col-5">
                 <label>No RM</label>
               </div>
               <div class="col-7">
-                <input class="form-control" type="text" name="no_Registration" id="no_Registration" readonly>
+                <input class="form-control" type="text" name="no_Registration" id="no_Registration" value="<?php echo $row->NO_REGISTRATION ?>" readonly>
               </div>
             </div>
 
@@ -173,7 +201,7 @@
                 <label>Nama Lengkap</label>
               </div>
               <div class="col-7">
-                <input class="form-control" type="text" name="thename" id="thename" readonly>
+                <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $row->THENAME ?>" readonly>
               </div>
             </div>
 
@@ -182,13 +210,13 @@
                 <label>Tanggal Lahir</label>
               </div>
               <div class="col-3">
-                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" readonly>
+                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $row->DATE_OF_BIRTH ?>" readonly>
               </div>
               <div class="col-md-1">
                 <label>Umur</label>
               </div>
               <div class="col-3">
-                <input class="form-control" type="text" name="ageyear" id="ageyear" readonly>
+                <input class="form-control" type="text" name="ageyear" id="ageyear" value="<?php echo $row->AGEYEAR ?> " readonly>
               </div>
             </div>
 
@@ -196,9 +224,9 @@
               <div class="col-5">
                 <label>Jenis Kelamin</label><br>
               </div>
-              <div class="col-1">
+              <div class="col-2">
                 <div class="form-input">
-                  <input type="text" class="form-control" name="gender" id="gender" readonly>
+                  <input type="text" class="form-control" name="gender" id="gender" value="<?php echo $row->GENDER ?>" readonly>
                 </div>
               </div>
             </div>
@@ -208,7 +236,7 @@
                 <label>Alamat</label>
               </div>
               <div class="col-7">
-                <textarea class="form-control" name="theaddress" id="theaddress" cols="6" rows="2" readonly></textarea>
+                <textarea class="form-control" name="theaddress" id="theaddress" cols="6" rows="2" readonly><?php echo $row->THEADDRESS ?></textarea>
               </div>
             </div>
 
@@ -217,7 +245,7 @@
                 <label>Dokter Penanggung Jawab Pasien</label>
               </div>
               <div class="col-7">
-                <input class="form-control" type="text" name="v_06" id="v_06">
+                <input class="form-control" type="text" name="v_01" id="v_01">
               </div>
             </div>
 
@@ -226,7 +254,7 @@
                 <label>Ruangan</label>
               </div>
               <div class="col-7">
-                <input class="form-control" type="text" name="class_room_id" id="class_room_id" readonly>
+                <input class="form-control" type="text" name="class_room_id" id="class_room_id" value="<?php echo $row->CLASS_ROOM_ID ?>" readonly>
               </div>
             </div>
 
@@ -234,8 +262,8 @@
               <div class="col-md-5">
                 <label>Tanggal dan Pukul</label>
               </div>
-              <div class="col-4">
-                <input class="form-control" type="datetime-local" name="examination_date" id="examination_date" readonly>
+              <div class="col-5">
+                <input class="form-control" type="datetime-local" name="examination_date" id="examination_date" value="<?php echo $row->EXAMINATION_DATE ?>" readonly>
               </div>
             </div>
 
@@ -250,14 +278,14 @@
         <label>Dokter Pelaksana Tindakan</label>
       </div>
       <div class="col-7">
-        <input class="form-control" type="text" name="v_10" id="v_10">
+        <input class="form-control" type="text" name="v_02" id="v_02">
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-5">
         <label>Penanggung Jawab *</label>
-        <select class="form-control" name="t_02">
+        <select class="form-control" name="t_01" id="t_01_penanggungjawab">
           <option selected>Pilih</option>
           <option value="1">Penerima Informasi</option>
           <option value="2">Pemberi Persetujuan</option>
@@ -265,7 +293,7 @@
       </div>
       <div class="col-md-7">
         <label></label>
-        <input class="form-control" type="text" name="v_11" id="v_11">
+        <input class="form-control" type="text" name="v_03" id="v_03">
       </div>
     </div>
 
@@ -291,12 +319,12 @@
           <td>Diagnosis (WD & DD)</td>
           <td>
             <div class="form-group">
-              <input class="form-control" type="text" name="v_12" id="v_12">
+              <input class="form-control" type="text" name="v_04" id="v_04">
             </div>
           </td>
           <td class="text-center">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_03" name="t_03">
+              <input class="form-check-input" type="checkbox" id="t_02_diagnosiswddd" name="t_02" value="1">
             </div>
           </td>
         </tr>
@@ -306,12 +334,12 @@
           <td>Dasar Diagnosis</td>
           <td>
             <div class="form-group">
-              <input class="form-control" type="text" name="v_13" id="v_13">
+              <input class="form-control" type="text" name="v_05" id="v_05">
             </div>
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_04" name="t_04">
+              <input class="form-check-input" type="checkbox" id="t_03_dasardiagnosis" name="t_03" value="1">
             </div>
           </td>
         </tr>
@@ -321,12 +349,12 @@
           <td>Tindakan Kedokteran</td>
           <td>
             <div class="form-group">
-              <input class="form-control" type="text" name="v_14" id="v_14">
+              <input class="form-control" type="text" name="v_06" id="v_06">
             </div>
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_05" name="t_05">
+              <input class="form-check-input" type="checkbox" id="t_04_tindakankedokteran" name="t_04" value="1">
             </div>
           </td>
         </tr>
@@ -336,12 +364,12 @@
           <td>Indikasi Tindakan</td>
           <td>
             <div class="form-group">
-              <input class="form-control" type="text" id="v_15" name="v_15">
+              <input class="form-control" type="text" id="v_07" name="v_07">
             </div>
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_06" name="t_06">
+              <input class="form-check-input" type="checkbox" id="t_05_indikasitindakan" name="t_05" value="1">
             </div>
           </td>
         </tr>
@@ -362,12 +390,12 @@
           </td>
           <td>
             <div class="form-group">
-              <input class="form-control" type="text" name="v_16" id="v_16">
+              <input class="form-control" type="text" name="v_08" id="v_08">
             </div>
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_07" name="t_07">
+              <input class="form-check-input" type="checkbox" id="t_06_tipesedasi" name="t_06" value="1">
             </div>
           </td>
         </tr>
@@ -378,12 +406,12 @@
           </td>
           <td>
             <div class="form-group">
-              <input class="form-control" type="text" name="v_17" id="v_17">
+              <input class="form-control" type="text" name="v_09" id="v_09">
             </div>
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_08" name="t_08">
+              <input class="form-check-input" type="checkbox" id="t_07_uraiansingkat" name="t_07" value="2">
             </div>
           </td>
         </tr>
@@ -393,12 +421,12 @@
           <td>Tujuan</td>
           <td>
             <div class="form-group">
-              <input class="form-control" type="text" name="v_18" id="v_18">
+              <input class="form-control" type="text" name="v_10" id="v_10">
             </div>
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_09" name="t_09">
+              <input class="form-check-input" type="checkbox" id="t_08_tujuan" name="t_08" value="1">
             </div>
           </td>
         </tr>
@@ -408,12 +436,12 @@
           <td>Risiko</td>
           <td>
             <div class="form-group">
-              <input class="form-control" type="text" name="v_19" id="v_19">
+              <input class="form-control" type="text" name="v_11" id="v_11">
             </div>
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_10" name="t_10">
+              <input class="form-check-input" type="checkbox" id="t_09_risiko" name="t_09" value="1">
             </div>
           </td>
         </tr>
@@ -423,12 +451,12 @@
           <td>Komplikasi</td>
           <td>
             <div class="form-group">
-              <input class="form-control" type="text" name="v_20" id="v_20">
+              <input class="form-control" type="text" name="v_12" id="v_12">
             </div>
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_11" name="t_11">
+              <input class="form-check-input" type="checkbox" id="t_010_komplikasi" name="t_010" value="1">
             </div>
           </td>
         </tr>
@@ -448,12 +476,12 @@
           </td>
           <td>
             <div class="form-group">
-              <input class="form-control" type="text" name="v_21" id="v_21">
+              <input class="form-control" type="text" name="v_13" id="v_13">
             </div>
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_12" name="t_12">
+              <input class="form-check-input" type="checkbox" id="t_011_prognosisvital" name="t_011" value="1">
             </div>
           </td>
         </tr>
@@ -464,12 +492,12 @@
           </td>
           <td>
             <div class="form-group">
-              <input class="form-control" type="text" name="v_22" id="v_22">
+              <input class="form-control" type="text" name="v_14" id="v_14">
             </div>
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_13" name="t_13">
+              <input class="form-check-input" type="checkbox" id="t_012_prognosisfungsi" name="t_012" value="2">
             </div>
           </td>
         </tr>
@@ -481,12 +509,12 @@
           </td>
           <td>
             <div class="form-group">
-              <input class="form-control" type="text" name="v_23" id="v_23">
+              <input class="form-control" type="text" name="v_15" id="v_15">
             </div>
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_14" name="t_14">
+              <input class="form-check-input" type="checkbox" id="t_013_prognosiskesembuhan" name="t_013" value="3">
             </div>
           </td>
         </tr>
@@ -499,12 +527,12 @@
           </td>
           <td>
             <div class="form-group">
-              <input class="form-control" type="text" name="v_24" id="v_24">
+              <input class="form-control" type="text" name="v_16" id="v_16">
             </div>
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_15" name="t_15">
+              <input class="form-check-input" type="checkbox" id="t_014_pilihanpengobatan" name="t_014" value="1">
             </div>
           </td>
         </tr>
@@ -524,12 +552,12 @@
           </td>
           <td>
             <div class="form-group">
-              <input class="form-control" type="text" name="v_25" id="v_25">
+              <input class="form-control" type="text" name="v_17" id="v_17">
             </div>
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_16" name="t_16">
+              <input class="form-check-input" type="checkbox" id="t_015_perluasantindakan" name="t_015" value="1">
             </div>
           </td>
         </tr>
@@ -540,12 +568,12 @@
           </td>
           <td>
             <div class="form-group">
-              <input class="form-control" type="text" name="v_26" id="v_26">
+              <input class="form-control" type="text" name="v_18" id="v_18">
             </div>
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_17" name="t_17">
+              <input class="form-check-input" type="checkbox" id="t_016_konsultasiselamatindakan" name="t_016" value="2">
             </div>
           </td>
         </tr>
@@ -556,12 +584,12 @@
           </td>
           <td>
             <div class="form-group">
-              <input class="form-control" type="text" name="v_27" id="v_27">
+              <input class="form-control" type="text" name="v_19" id="v_19">
             </div>
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_18" name="t_18">
+              <input class="form-check-input" type="checkbox" id="t_017_resusitasi" name="t_017" value="3">
             </div>
           </td>
         </tr>
@@ -607,32 +635,27 @@
       <tr>
         <td>
           <p>
-            Yang bertanda tangan dibawah ini, Saya, nama <input type="text" name="v_28" id="v_28" readonly> tahun, <input type="text" name="v_29" id="v_29" readonly>,
-            alamat <input type="text" name="v_30" id="v_30" readonly> dengan ini menyatakan persetujuan untuk dilakukannya tindakan <input type="text" name="v_31" id="v_31" readonly> terhadap saya
-          </p><br>
-
-
-          <p>
-            Yang bertanda tangan dibawah ini, Saya, nama <input type="text" name="v_32" id="v_32" readonly> umur <input type="text" name="v_33" id="v_33" readonly> tahun,
-            <input type="radio" class="form-check-input" name="gender" id="gender" value="laki">
-            <label class="form-check-label" for="gender">Laki-laki</label>
-            <input type="radio" class="form-check-input" name="gender" id="gender" value="perempuan">
-            <label class="form-check-label" for="gender_pr">Perempuan</label>,
-            alamat <input type="text" name="v_34" id="v_34" readonly> dengan ini menyatakan persetujuan
-            untuk dilakukannya tindakan <input type="text" name="v_35" id="v_35" readonly> terhadap<input type="text" name="v_36" id="v_36" readonly> saya
-            bernama <input type="text" name="v_37" id="v_37" readonly> umur <input type="text" name="v_38" id="v_38" readonly> tahun, <input type="text" name="v_39" id="v_39" readonly>, alamat <input type="text" name="v_40" id="v_40" readonly>
-
+            Yang bertanda tangan dibawah ini, Saya, Nama <input type="text" id="v_20" name="v_20">
+            Umur <input type="text" id="t_018_umur" name="t_018">
+            tahun,
+            <input type="radio" class="form-check-input" id="t_019_lk" name="t_019" value="1">
+            <label class="form-check-label" for="t_019_lk">Laki-laki</label>
+            <input type="radio" class="form-check-input" id="t_019_pr" name="t_019" value="2">
+            <label class="form-check-label" for="t_019_pr">Perempuan</label>,<br>
+            Alamat <input type="text" id="v_21" name="v_21">
+            dengan ini menyatakan <b>PERSETUJUAN</b> untuk dilakukannya tindakan <input type="text" id="v_22" name="v_22">
+            terhadap <input type="radio" class="form-check-input" id="t_020_saya" name="t_020" value="1"> <label class="form-check-label" for="t_020_saya">Saya</label>
+            /
+            <input type="radio" class="form-check-input" id="t_020_atau" name="t_020" value="2"> <input type="text" id="v_23" name="v_23" disabled="disabled">
+            saya bernama <input type="text" id="v_24" name="v_24" disabled="disabled">
+            Umur <input type="text" id="t_021" name="t_021" disabled="disabled">
+            tahun,
+            <input type="radio" class="form-check-input" id="t_022_lk" name="t_022" disabled="disabled">
+            <label class="form-check-label" for="t_022_lk">Laki-laki</label>
+            <input type="radio" class="form-check-input" id="t_022_pr" name="t_022" disabled="disabled">
+            <label class="form-check-label" for="t_022_pr">Perempuan</label>,<br>
+            Alamat <input type="text" id="v_25" name="v_25" disabled="disabled">
           </p>
-
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>
-        </td>
-      </tr>
-      <tr>
-        <td>
           <p>
             Saya memahami perlunya dan manfaat tindakan tersebut sebagaimana telah dijelaskan seperti diatas kepada saya termasuk risiko dan komplikasi yang mungkin timbul.
             Saya juga menyadari bahwa dokter melakukan suatu upaya dan oleh karena ilmu kedokteran bukanlah ilmu pasti, maka keberhasilan tindakan kedokteran bukanlah keniscayaan, melainkan sangat bergantung kepada izin Tuhan Yang Maha Esa.
@@ -644,7 +667,7 @@
     <div class="container mt-5">
       <table class="table text-center">
         <tr>
-          <p>Bengkulu, <input type="datetime-local" name="v_41" id="v_41"></p>
+          <p>Bengkulu, <input type="datetime-local" name="v_26" id="v_26"></p>
         </tr>
         <tr>
           <td>Yang Menyatakan</td>
@@ -668,38 +691,34 @@
         </tr>
         <tr>
           <td>
-            <input type="text" name="v_42" id="v_42">
+            <input type="text" name="v_27" id="v_27">
           </td>
           <td>
-            <input type="text" name="v_43" id="v_43">
+            <input type="text" name="v_28" id="v_28">
           </td>
           <td>
-            <input type="text" name="v_44" id="v_44">
+            <input type="text" name="v_29" id="v_29">
           </td>
           <td>
-            <input type="text" name="v_45" id="v_45">
+            <input type="text" name="v_30" id="v_30">
           </td>
         </tr>
       </table>
 
     </div>
     <div class="mb-3">
-      <a class="btn form-control"><i class="fa fa-save"></i> SAVE</a>
+      <input type="submit" name="submit" class="btn form-control"></input>
     </div>
     </form>
+  </div>
 
+  <!-- Optional JavaScript; choose one of the two! -->
 
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-
-
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->

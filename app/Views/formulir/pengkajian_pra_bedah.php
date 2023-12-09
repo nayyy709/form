@@ -33,6 +33,7 @@ foreach ($dataAssessmentform2 as $row) {
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="<?= base_url('js/jquery.signature.js') ?>"></script>
+  <!-- Signature1 -->
   <script>
     $(function() {
       var sig = $('#sig').signature();
@@ -46,7 +47,7 @@ foreach ($dataAssessmentform2 as $row) {
       });
     });
   </script>
-
+  <!-- Style submit & back -->
   <style>
     .btn {
       background-color: black;
@@ -76,7 +77,6 @@ foreach ($dataAssessmentform2 as $row) {
     <div style="text-align: right;">
       <h2>RM 10</h2>
     </div>
-
     <table class="table table-bordered mb-0" style="border: 1px solid black;">
       <tr>
         <td width="40%">
@@ -139,220 +139,224 @@ foreach ($dataAssessmentform2 as $row) {
               <div class="col-8">
                 <input type="file" name="upload" id="upload">
                 <input type="submit" name="upload" value="Submit">
-        </form>
-  </div>
-  </div>
+              </div>
+            </div>
+          </td>
+      </tr>
+    </table>
 
-  </td>
-  </tr>
-  </table>
+    <table class="table table-bordered" style="border: 1px solid black;">
+      <tr>
+        <td>
+          <div class="row align-items-center">
+            <div class="col-4">
+              <label>1. Anamnesa (*)</label>
+            </div>
+            <div class="col-8">
+              <textarea class="form-control" name="anamnase" id="anamnase" cols="6" rows="2"></textarea>
+            </div>
+          </div>
 
-  <table class="table table-bordered" style="border: 1px solid black;">
-    <tr>
-      <td>
-        <div class="row align-items-center">
-          <div class="col-4">
-            <label>1. Anamnesa (*)</label>
+          <div class="row align-items-center">
+            <div class="col-4">
+              <label>2. Pemeriksaan (*)</label>
+            </div>
+            <div class="col-8">
+              <textarea class="form-control" name="v_01" id="v_01" cols="6" rows="2"></textarea>
+            </div>
           </div>
-          <div class="col-8">
-            <textarea class="form-control" name="anamnase" id="anamnase" cols="6" rows="2"></textarea>
-          </div>
-        </div>
 
-        <div class="row align-items-center">
-          <div class="col-4">
-            <label>2. Pemeriksaan (*)</label>
+          <div class="row align-items-center">
+            <div class="col">
+              <label>3. PemeriksaanPenunjang (*)</label>
+            </div>
           </div>
-          <div class="col-8">
-            <textarea class="form-control" name="v_08" id="v_08" cols="6" rows="2"></textarea>
-          </div>
-        </div>
 
-        <div class="row align-items-center">
-          <div class="col">
-            <label>3. PemeriksaanPenunjang (*)</label>
+          <div class="row align-items-center">
+            <div class="col-4">
+              <label class="align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Laboratorium :</label>
+            </div>
+            <div class="col-8">
+              <input class="form-control" type="text" name="v_02" id="v_02">
+            </div>
           </div>
-        </div>
 
-        <div class="row">
-          <div class="col-4">
-            <label class="align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Laboratorium :</label>
+          <div class="row align-items-center">
+            <div class="col-4">
+              <label class="align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. USG :</label>
+            </div>
+            <div class="col-8">
+              <input class="form-control" type="text" name="v_03" id="v_03">
+            </div>
           </div>
-          <div class="col-8">
-            <input class="form-control" type="text" name="v_09" id="v_09">
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-4">
-            <label class="align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. USG :</label>
+          <div class="row align-items-center">
+            <div class="col-4">
+              <label class="align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. CT Scan/MRI/MRCP/Rontgen :</label>
+            </div>
+            <div class="col-8">
+              <input class="form-control" type="text" name="v_04" id="v_04">
+            </div>
           </div>
-          <div class="col-8">
-            <input class="form-control" type="text" name="v_10" id="v_10">
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-4">
-            <label class="align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. CT Scan/MRI/MRCP/Rontgen :</label>
+          <div class="row align-items-center">
+            <div class="col-4">
+              <label class="align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. Lain-lain :</label>
+            </div>
+            <div class="col-8">
+              <input class="form-control" type="text" name="v_05" id="v_05">
+            </div>
           </div>
-          <div class="col-8">
-            <input class="form-control" type="text" name="v_11" id="v_11">
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-4">
-            <label class="align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. Lain-lain :</label>
+          <div class="row align-items-center">
+            <div class="col-4">
+              <label>4. Diagnosa pre anestesi :</label>
+            </div>
+            <div class="col-8">
+              <input class="form-control" type="text" name="v_06" id="v_06">
+            </div>
           </div>
-          <div class="col-8">
-            <input class="form-control" type="text" name="v_12" id="v_12">
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-4">
-            <label>4. Diagnosa pre anestesi :</label>
+          <div class="row align-items-center">
+            <div class="col">
+              <label>5. Rencana Operasi</label>
+            </div>
           </div>
-          <div class="col-8">
-            <input class="form-control" type="text" name="v_13" id="v_13">
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col">
-            <label>5. Rencana Operasi</label>
+          <div class="row align-items-center">
+            <div class="col-4">
+              <label class="align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Tindakan/Prosedur :</label>
+            </div>
+            <div class="col-8">
+              <input class="form-control" type="text" name="v_07" id="v_07">
+            </div>
           </div>
-        </div>
 
-        <div class="row">
-          <div class="col-4">
-            <label class="align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Tindakan/Prosedur :</label>
+          <div class="row align-items-center">
+            <div class="col-4">
+              <label class="align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Waktu:</label>
+            </div>
+            <div class="col-2">
+              <input class="form-control" type="time" name="v_08" id="v_08">
+            </div>
+            <div class="col-1">
+              <label>Tempat</label>
+            </div>
+            <div class="col-5">
+              <input class="form-control" type="text" name="v_09" id="v_09">
+            </div>
           </div>
-          <div class="col-8">
-            <input class="form-control" type="text" name="v_14" id="v_14">
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-4">
-            <label class="align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Waktu dan tempat :</label>
+          <div class="row align-items-center">
+            <div class="col-4">
+              <label class="align-items-center">6. Alternatif :</label>
+            </div>
+            <div class="col-8">
+              <input class="form-control" type="text" name="v_16" id="v_16">
+            </div>
           </div>
-          <div class="col-8">
-            <input class="form-control" type="text" name="v_15" id="v_15">
-          </div>
-        </div>
 
+          <div class="row align-items-center">
+            <div class="col-4">
+              <label class="align-items-center">7. Resiko dan rencana prosedur operasi :</label>
+            </div>
+            <div class="col-8">
+              <input class="form-control" type="text" name="v_17" id="v_17">
+            </div>
+          </div>
 
-        <div class="row">
-          <div class="col-4">
-            <label class="align-items-center">6. Alternatif :</label>
+          <div class="row align-items-center">
+            <div class="col-4">
+              <label class="align-items-center">8. Potensial Komplikasi :</label>
+            </div>
+            <div class="col-8">
+              <input class="form-control" type="text" name="v_18" id="v_18">
+            </div>
           </div>
-          <div class="col-8">
-            <input class="form-control" type="text" name="v_16" id="v_16">
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-4">
-            <label class="align-items-center">7. Resiko dan rencana prosedur operasi :</label>
+          <div class="row align-items-center">
+            <div class="col-4">
+              <label class="align-items-center">9. Keuntungan dari prosedur operasi ini :</label>
+            </div>
+            <div class="col-8">
+              <input class="form-control" type="text" name="v_19" id="v_19">
+            </div>
           </div>
-          <div class="col-8">
-            <input class="form-control" type="text" name="v_17" id="v_17">
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-4">
-            <label class="align-items-center">8. Potensial Komplikasi :</label>
+          <div class="row align-items-center">
+            <div class="col-4">
+              <label class="align-items-center">10. Transfusi(optional) :</label>
+            </div>
+            <div class="col-8">
+              <input class="form-control" type="text" name="v_20" id="v_20">
+            </div>
           </div>
-          <div class="col-8">
-            <input class="form-control" type="text" name="v_18" id="v_18">
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-4">
-            <label class="align-items-center">9. Keuntungan dari prosedur operasi ini :</label>
+          <div class="row align-items-center">
+            <div class="col">
+              <label class="align-items-center">11. Catatan</label>
+            </div>
           </div>
-          <div class="col-8">
-            <input class="form-control" type="text" name="v_19" id="v_19">
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-4">
-            <label class="align-items-center">10. Transfusi(optional) :</label>
+          <div class="row align-items-center">
+            <div class="col">
+              <label class="align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a.Telah dijelaskan kepada</label>
+            </div>
           </div>
-          <div class="col-8">
-            <input class="form-control" type="text" name="v_20" id="v_20">
+          <div class="row align-items-center">
+            <div class="col-1">
+              <label class="align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b.Sebagai</label>
+            </div>
+            <div class="col-2">
+              <select class="form-control" name="v_21" name="v_21">
+                <option selected>Pilih</option>
+                <option value="1">Pasien</option>
+                <option value="2">Wali</option>
+                <option value="3">Keluarga</option>
+              </select>
+            </div>
+            <div class="col-1">
+              <label class="align-items-center">,hubungan</label>
+            </div>
+            <div class="col-8">
+              <input class="form-control" type="text" name="v_22" id="v_22">
+            </div>
           </div>
-        </div>
-
-        <div class="row">
-          <div class="col">
-            <label class="align-items-center">11. Catatan</label>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col">
-            <label class="align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a.Telah dijelaskan kepada</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-1">
-            <label class="align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b.Sebagai</label>
-          </div>
-          <div class="col-2">
-            <select class="form-control" name="v_21" name="v_21">
-              <option selected>Pilih</option>
-              <option value="1">Pasien</option>
-              <option value="2">Wali</option>
-              <option value="3">Keluarga</option>
-            </select>
-          </div>
-          <div class="col-1">
-            <label class="align-items-center">,hubungan</label>
-          </div>
-          <div class="col-8">
-            <input class="form-control" type="text" name="v_22" id="v_22">
-          </div>
-        </div>
 
 
-        <div class="row">
-          <div class="col">
-            <label>&nbsp;&nbsp;&nbsp;&nbsp;c.Tentang diagnosis,rencana operasi,berikut resiko,alernatif,komplikasi keuntungan prosedur</label>
+          <div class="row align-items-center">
+            <div class="col">
+              <label>&nbsp;&nbsp;&nbsp;&nbsp;c.Tentang diagnosis,rencana operasi,berikut resiko,alernatif,komplikasi keuntungan prosedur</label>
+            </div>
           </div>
-        </div>
 
-        <div class="row">
-          <div class="col">
-            <textarea class="form-control" name="v_23" id="v_23" cols="6" rows="2"></textarea>
+          <div class="row align-items-center">
+            <div class="col">
+              <textarea class="form-control" name="v_23" id="v_23" cols="6" rows="2"></textarea>
+            </div>
           </div>
-        </div>
-        <br>
-        <br>
-        <div class="text start">
-          <p>Dokter Operator</p>
-          <div id="sig"></div>
-        </div>
-        <div>
           <br>
-          <input class="mb-3" type="text" name="v_24" id="v_24" placeholder="Tanda tangan dan nama lengkap" size="25">
-        </div>
+          <br>
+          <div class="text start">
+            <p>Dokter Operator</p>
+            <div id="sig"></div>
+          </div>
+          <div>
+            <br>
+            <input class="mb-3" type="text" name="v_24" id="v_24" placeholder="Tanda tangan dan nama lengkap" size="25">
+          </div>
 
-        <div>
-          <p class="mb-5">(*) Ditulis yang mendukung diagnosis saja</p>
-        </div>
+          <div>
+            <p class="mb-5">(*) Ditulis yang mendukung diagnosis saja</p>
+          </div>
 
-      </td>
-    </tr>
-  </table>
-  <div class="mb-3">
-    <a class="btn form-control"><i class="fa fa-save"></i> SAVE</a>
-  </div>
+        </td>
+      </tr>
+    </table>
+    <div class="mb-3">
+      <a class="btn form-control"><i class="fa fa-save"></i> SAVE</a>
+    </div>
+    </form>
   </div>
 
 

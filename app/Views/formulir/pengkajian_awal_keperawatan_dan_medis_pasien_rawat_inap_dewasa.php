@@ -1516,7 +1516,7 @@ foreach ($dataAssessmentform4 as $row) {
           <h4>PENGKAJIAN AWAL KEPERAWATAN DAN MEDIS<br>PASIEN RAWAT INAP DEWASA</h4>
           <h5>(Formulir harus dilengkapi dalam waktu 24 jam pertama pasien masuk rawat inap)</h5>
         </td>
-        <form>
+        <form action="<?= site_url('addform/add_aksi') ?>" method="post">
           <td>
             <div class="row">
               <div class="col-5">
@@ -1590,7 +1590,7 @@ foreach ($dataAssessmentform4 as $row) {
                 <div class="row align-items-center">
                   <div class="col-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" id="t_01_pasien" name="t_01" value="Pasien">
+                      <input class="form-check-input" type="radio" id="t_01_pasien" name="t_01" value="1">
                       <label class="form-check-label" for="t_01_pasien">Pasien</label>
                     </div>
                   </div>
@@ -1600,7 +1600,7 @@ foreach ($dataAssessmentform4 as $row) {
                 <div class="row align-items-center">
                   <div class="col-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" id="t_01_keluarga" name="t_01" value="Keluarga">
+                      <input class="form-check-input" type="radio" id="t_01_keluarga" name="t_01" value="2">
                       <label class="form-check-label" for="t_01_keluarga">Keluarga</label>
                     </div>
                   </div>
@@ -1610,7 +1610,7 @@ foreach ($dataAssessmentform4 as $row) {
                 <div class="row align-items-center">
                   <div class="col-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" id="t_01_lainnya" name="t_01" value="Lainnya">
+                      <input class="form-check-input" type="radio" id="t_01_lainnya" name="t_01" value="3">
                       <label class="form-check-label" for="t_01_lainnya">Lainnya</label>
                     </div>
                   </div>
@@ -1631,7 +1631,7 @@ foreach ($dataAssessmentform4 as $row) {
                 <div class="row align-items-center">
                   <div class="col-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" id="t_02_islam" name="t_02" value="Islam">
+                      <input class="form-check-input" type="radio" id="t_02_islam" name="t_02" value="1">
                       <label class="form-check-label" for="t_02_islam">Islam</label>
                     </div>
                   </div>
@@ -1641,7 +1641,7 @@ foreach ($dataAssessmentform4 as $row) {
                 <div class="row align-items-center">
                   <div class="col-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" id="t_02_protestan" name="t_02" value="Protestan ">
+                      <input class="form-check-input" type="radio" id="t_02_protestan" name="t_02" value="2 ">
                       <label class="form-check-label" for="t_02_protestan">Protestan</label>
                     </div>
                   </div>
@@ -1651,7 +1651,7 @@ foreach ($dataAssessmentform4 as $row) {
                 <div class="row align-items-center">
                   <div class="col-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" id="t_02_katholik" name="t_02" value="Katholik">
+                      <input class="form-check-input" type="radio" id="t_02_katholik" name="t_02" value="3">
                       <label class="form-check-label" for="t_02_katholik">Katholik</label>
                     </div>
                   </div>
@@ -1661,7 +1661,7 @@ foreach ($dataAssessmentform4 as $row) {
                 <div class="row align-items-center">
                   <div class="col-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" id="t_02_lainnya" name="t_02" value="Lainnya">
+                      <input class="form-check-input" type="radio" id="t_02_lainnya" name="t_02" value="7">
                       <label class="form-check-label" for="t_02_lainnya">Lainnya</label>
                     </div>
                   </div>
@@ -1677,7 +1677,7 @@ foreach ($dataAssessmentform4 as $row) {
                 <div class="row align-items-center">
                   <div class="col-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" id="t_02_hindu" name="t_02" value="Hindu">
+                      <input class="form-check-input" type="radio" id="t_02_hindu" name="t_02" value="4">
                       <label class="form-check-label" for="t_02_hindu">Hindu</label>
                     </div>
                   </div>
@@ -1687,7 +1687,7 @@ foreach ($dataAssessmentform4 as $row) {
                 <div class="row align-items-center">
                   <div class="col-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" id="t_02_budha" name="t_02" value="Budha">
+                      <input class="form-check-input" type="radio" id="t_02_budha" name="t_02" value="5">
                       <label class="form-check-label" for="t_02_budha">Budha</label>
                     </div>
                   </div>
@@ -1697,7 +1697,7 @@ foreach ($dataAssessmentform4 as $row) {
                 <div class="row align-items-center">
                   <div class="col-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" id="t_02_konghucu" name="t_02" value="Konghucu">
+                      <input class="form-check-input" type="radio" id="t_02_konghucu" name="t_02" value="6">
                       <label class="form-check-label" for="t_02_konghucu">Konghucu</label>
                     </div>
                   </div>
@@ -1712,7 +1712,7 @@ foreach ($dataAssessmentform4 as $row) {
                 <div class="row align-items-center">
                   <div class="col-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" id="t_03_sd" name="t_03" value="SD">
+                      <input class="form-check-input" type="radio" id="t_03_sd" name="t_03" value="1">
                       <label class="form-check-label" for="t_03_sd">SD</label>
                     </div>
                   </div>
@@ -1722,7 +1722,7 @@ foreach ($dataAssessmentform4 as $row) {
                 <div class="row align-items-center">
                   <div class="col-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" id="t_03_smp" name="t_03" value="SMP">
+                      <input class="form-check-input" type="radio" id="t_03_smp" name="t_03" value="2">
                       <label class="form-check-label" for="t_03_smp">SMP</label>
                     </div>
                   </div>
@@ -1732,7 +1732,7 @@ foreach ($dataAssessmentform4 as $row) {
                 <div class="row align-items-center">
                   <div class="col-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" id="t_03_sma" name="t_03" value="SMA">
+                      <input class="form-check-input" type="radio" id="t_03_sma" name="t_03" value="3">
                       <label class="form-check-label" for="t_03_sma">SMA</label>
                     </div>
                   </div>
@@ -1742,7 +1742,7 @@ foreach ($dataAssessmentform4 as $row) {
                 <div class="row align-items-center">
                   <div class="col-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" id="t_03_lainnya" name="t_03" value="Lainnya">
+                      <input class="form-check-input" type="radio" id="t_03_lainnya" name="t_03" value="8">
                       <label class="form-check-label" for="t_03_lainnya">Lainnya</label>
                     </div>
                   </div>
@@ -1758,7 +1758,7 @@ foreach ($dataAssessmentform4 as $row) {
                 <div class="row align-items-center">
                   <div class="col-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" id="t_03_diploma" name="t_03" value="Diploma">
+                      <input class="form-check-input" type="radio" id="t_03_diploma" name="t_03" value="4">
                       <label class="form-check-label" for="t_03_diploma">Diploma</label>
                     </div>
                   </div>
@@ -1768,7 +1768,7 @@ foreach ($dataAssessmentform4 as $row) {
                 <div class="row align-items-center">
                   <div class="col-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" id="t_03_s1" name="t_03" value="S1">
+                      <input class="form-check-input" type="radio" id="t_03_s1" name="t_03" value="5">
                       <label class="form-check-label" for="t_03_s1">S1</label>
                     </div>
                   </div>
@@ -1778,7 +1778,7 @@ foreach ($dataAssessmentform4 as $row) {
                 <div class="row align-items-center">
                   <div class="col-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" id="t_03_s2" name="t_03" value="S2">
+                      <input class="form-check-input" type="radio" id="t_03_s2" name="t_03" value="6">
                       <label class="form-check-label" for="t_03_s2">S2</label>
                     </div>
                   </div>
@@ -1788,7 +1788,7 @@ foreach ($dataAssessmentform4 as $row) {
                 <div class="row align-items-center">
                   <div class="col-3">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" id="t_03_s3" name="t_03" value="S3">
+                      <input class="form-check-input" type="radio" id="t_03_s3" name="t_03" value="7">
                       <label class="form-check-label" for="t_03_s3">S3</label>
                     </div>
                   </div>
@@ -5536,11 +5536,12 @@ foreach ($dataAssessmentform4 as $row) {
 
 
     </table>
+    <div class="mb-3">
+      <input type="submit" name="submit" class="btn form-control"></input>
+    </div>
     </form>
 
-    <div class="mb-3">
-      <a class="btn form-control"><i class="fa fa-save"></i> SAVE</a>
-    </div>
+
   </div>
 
   <!-- Optional JavaScript; choose one of the two! -->

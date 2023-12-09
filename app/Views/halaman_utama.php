@@ -59,7 +59,7 @@
                         <br>
                         <br>
                         <br>
-                        <a href="<?= site_url('home/form1') ?>" class="btn btn-dark">Go to Form 1</a>
+                        <a href="<?= site_url('formulir/form1') ?>" class="btn btn-dark">Go to Form 1</a>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                         <br>
                         <br>
                         <br>
-                        <a href="<?= site_url('home/form2') ?>" class="btn btn-dark ">Go to Form 2</a>
+                        <a href="<?= site_url('formulir/form2') ?>" class="btn btn-dark ">Go to Form 2</a>
                     </div>
                 </div>
             </div>
@@ -84,7 +84,7 @@
                         <br>
                         <br>
                         <br>
-                        <a href="<?= site_url('home/form3') ?>" class="btn btn-dark ">Go to Form 3</a>
+                        <a href="<?= site_url('formulir/form3') ?>" class="btn btn-dark ">Go to Form 3</a>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Form Pengkajian Awal Keperawatan dan Medis Pasien Rawat Inap Dewasa</h5>
                         <br>
-                        <a href="<?= site_url('home/form4') ?>" class="btn btn-dark ">Go to Form 4</a>
+                        <a href="<?= site_url('formulir/form4') ?>" class="btn btn-dark ">Go to Form 4</a>
                     </div>
                 </div>
             </div>
