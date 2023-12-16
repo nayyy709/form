@@ -35,7 +35,7 @@ foreach ($dataAssessmentform3 as $row) {
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="<?= base_url('js/jquery.signature.js') ?>"></script>
 
-
+  <!-- Signature1 -->
   <script>
     $(function() {
       var sig = $('#sig').signature();
@@ -49,7 +49,7 @@ foreach ($dataAssessmentform3 as $row) {
       });
     });
   </script>
-
+  <!-- Signature2 -->
   <script>
     $(function() {
       var sig = $('#sig1').signature();
@@ -63,7 +63,7 @@ foreach ($dataAssessmentform3 as $row) {
       });
     });
   </script>
-
+  <!-- Signature3 -->
   <script>
     $(function() {
       var sig = $('#sig2').signature();
@@ -77,33 +77,33 @@ foreach ($dataAssessmentform3 as $row) {
       });
     });
   </script>
-
+  <!-- Font Size -->
   <style>
     h1 {
-      font-size: 17px;
+      font-size: 18px;
     }
 
     h2 {
-      font-size: 16px;
+      font-size: 17px;
     }
 
     h3 {
-      font-size: 15px;
+      font-size: 16px;
     }
 
     h4 {
-      font-size: 14px;
+      font-size: 15px;
     }
 
     h5 {
-      font-size: 13px;
+      font-size: 14px;
     }
 
     p {
-      font-size: 10px;
+      font-size: 13px;
     }
   </style>
-
+  <!-- btn back & submit -->
   <style>
     .btn {
       background-color: black;
@@ -136,7 +136,7 @@ foreach ($dataAssessmentform3 as $row) {
         <tr>
           <td align="right">
 
-            <img src="<?= base_url('uploads/gambar.jpg') ?>" alt="Gambar" width="55px" height="74px">
+            <img src="<?= base_url('uploads/gambar.jpg') ?>" alt="Gambar" width="60px" height="100px">
 
           </td>
 
@@ -145,187 +145,193 @@ foreach ($dataAssessmentform3 as $row) {
             <h2><b>Badan Layanan Umum Daerah</b></h2>
             <p>Jl. Bhayangkara Bengkulu 38229 Telp. (0736) 52004 – 52006 Fax (0736) 52007</p>
           </td>
-          <form>
-            <td>
-              <div class=" row">
-                <div class="col-4">
-                  <label>No.MR:</label>
-                </div>
-                <div class="col-8">
-                  <input class="form-control" type="text" name="no_Registration" id="no_Registration" placeholder="No.MR" value="<?php echo $row->NO_REGISTRATION ?>" readonly>
-                </div>
+          <td>
+            <div class=" row">
+              <div class="col-4">
+                <label>No.MR:</label>
               </div>
+              <div class="col-8">
+                <input class="form-control" type="text" name="no_Registration" id="no_Registration" placeholder="No.MR" value="<?php echo $row->NO_REGISTRATION ?>" readonly>
+              </div>
+            </div>
 
-              <div class="row">
-                <div class="col-4">
-                  <label>Nama Lengkap</label>
-                </div>
-                <div class="col-8">
-                  <input class="form-control" type="text" name="thename " id="thename  " placeholder="Nama Lengkap" value="<?php echo $row->THENAME ?>" readonly>
-                </div>
+            <div class="row">
+              <div class="col-4">
+                <label>Nama Lengkap</label>
               </div>
+              <div class="col-8">
+                <input class="form-control" type="text" name="thename " id="thename  " placeholder="Nama Lengkap" value="<?php echo $row->THENAME ?>" readonly>
+              </div>
+            </div>
 
-              <div class="row">
-                <div class="col-4">
-                  <label>Tanggal Lahir</label>
-                </div>
-                <div class="col-8">
-                  <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $row->DATE_OF_BIRTH ?>" readonly>
-                </div>
+            <div class="row">
+              <div class="col-4">
+                <label>Tanggal Lahir</label>
               </div>
-            </td>
+              <div class="col-8">
+                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $row->DATE_OF_BIRTH ?>" readonly>
+              </div>
+            </div>
+          </td>
         </tr>
-    </form>
-    </table>
+      </table>
 
-    <table class="table table-bordered" style="border: 2px solid black;">
-      <tr>
-        <td>
-          <h1 class="text-center">FORMULIR PEMBERIAN INFORMASI DAN PERSETUJUAN UMUM<br>
-            (GENERALCONSENT) UNTUK MENERIMA PELAYANAN KESEHATAN</h1>
-        </td>
-      </tr>
-    </table>
+      <table class="table table-bordered" style="border: 2px solid black;">
+        <tr>
+          <td>
+            <h1 class="text-center">FORMULIR PEMBERIAN INFORMASI DAN PERSETUJUAN UMUM<br>
+              (GENERALCONSENT) UNTUK MENERIMA PELAYANAN KESEHATAN</h1>
+          </td>
+        </tr>
+      </table>
 
-    <div class="container mt-5">
-      <h4>I. INFORMASI TENTANG DAHK DAN KEWAJIBAN SERTA TATA TERTIB RUMAH SAKIT:</h4>
+      <div class="container mt-5">
+        <h4>I. INFORMASI TENTANG DAHK DAN KEWAJIBAN SERTA TATA TERTIB RUMAH SAKIT:</h4>
 
-      <!-- 1 -->
-      <h5>&nbsp;&nbsp;&nbsp;&nbsp;1. Informasi tentang hak dan kewajiban pasien serta tata tertib Rumah Sakit dijelaskan melalui liflet dan brosur.</h5>
+        <!-- 1 -->
+        <h5>&nbsp;&nbsp;&nbsp;&nbsp;1. Informasi tentang hak dan kewajiban pasien serta tata tertib Rumah Sakit dijelaskan melalui liflet dan brosur.</h5>
 
-      <!-- 2 -->
-      <h5>&nbsp;&nbsp;&nbsp;&nbsp;2. Saya menyatakan setuju, baik sebagai wali atau sebagai pasien, bahwa sesuai pertimbangan pelayanan yang<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;diberikan kepada pasien, maka saya wajib untuk membayar total biaya perawatan yang diberikan sesuai acuan biaya<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspdan ketentuan Rumah Sakit dengan jaminan asuransi kesehatan/perusahaan maupun pribadi.</h5>
+        <!-- 2 -->
+        <h5>&nbsp;&nbsp;&nbsp;&nbsp;2. Saya menyatakan setuju, baik sebagai wali atau sebagai pasien, bahwa sesuai pertimbangan pelayanan yang<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;diberikan kepada pasien, maka saya wajib untuk membayar total biaya perawatan yang diberikan sesuai acuan biaya<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbspdan ketentuan Rumah Sakit dengan jaminan asuransi kesehatan/perusahaan maupun pribadi.</h5>
 
-      <!-- 3 -->
-      <h5>&nbsp;&nbsp;&nbsp;&nbsp;3. Barang-barang milik pasien dilindungi sesuai kemampuan Rumah Sakit.</h5>
+        <!-- 3 -->
+        <h5>&nbsp;&nbsp;&nbsp;&nbsp;3. Barang-barang milik pasien dilindungi sesuai kemampuan Rumah Sakit.</h5>
 
-      <h4 class="mt-3">II. PERAWATAN DAN PENGOBATAN</h4>
+        <h4 class="mt-3">II. PERAWATAN DAN PENGOBATAN</h4>
 
-      <!-- 1 -->
-      <h5>&nbsp;&nbsp;&nbsp;&nbsp;1. Saya menyetujui untuk dilakukan perawatan sebagai pasien rawat jalan, rawat inap, maupun Gawat Darurat di RSUD<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DR.M.Yunus Bengkulu dan memberikan kuasa untuk dilakukan pemeriksaan dan tindakan oleh dokter, perawat dan<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tenaga kesehatan lainnya dengan sarana dan prasarana yang tersedia di Rumah Sakit termasuk X-Ray, pemberian<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dan/atau penyuntikan produk farmasi dan obat-obatan, pemasangan alat kesehatan (kecuali yang membutuhkan<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;persetujuan khusus), pengambilan darah untuk pemeriksaan laboratorium atau pemeriksaan patologi yang<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;disarankan pada perawatan saya.</h5>
+        <!-- 1 -->
+        <h5>&nbsp;&nbsp;&nbsp;&nbsp;1. Saya menyetujui untuk dilakukan perawatan sebagai pasien rawat jalan, rawat inap, maupun Gawat Darurat di RSUD<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DR.M.Yunus Bengkulu dan memberikan kuasa untuk dilakukan pemeriksaan dan tindakan oleh dokter, perawat dan<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tenaga kesehatan lainnya dengan sarana dan prasarana yang tersedia di Rumah Sakit termasuk X-Ray, pemberian<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dan/atau penyuntikan produk farmasi dan obat-obatan, pemasangan alat kesehatan (kecuali yang membutuhkan<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;persetujuan khusus), pengambilan darah untuk pemeriksaan laboratorium atau pemeriksaan patologi yang<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;disarankan pada perawatan saya.</h5>
 
-      <!-- 2 -->
-      <h5>&nbsp;&nbsp;&nbsp;&nbsp;2. Saya mengakui bahwa RSUD DR.M. Yunus Bengkulu merupakan Rumah Sakit Pendidikan yang menjadi tempat<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;praktek klinik bagi mahasiswa kedokteran dan profesi-profesi lain. Karena itu mereka mungkin berpartisipasi dan atau<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;terlibat dalam perawatan saya. Saya menyetujui bahwa mahasiswa kedokteran dan profesi kesehatan lain<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;berpartisipasi dalam perawatan saya, sepanjang di bawah supervise Dokter Penanggung Jawab Pasien (DPKP). </h5>
+        <!-- 2 -->
+        <h5>&nbsp;&nbsp;&nbsp;&nbsp;2. Saya mengakui bahwa RSUD DR.M. Yunus Bengkulu merupakan Rumah Sakit Pendidikan yang menjadi tempat<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;praktek klinik bagi mahasiswa kedokteran dan profesi-profesi lain. Karena itu mereka mungkin berpartisipasi dan atau<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;terlibat dalam perawatan saya. Saya menyetujui bahwa mahasiswa kedokteran dan profesi kesehatan lain<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;berpartisipasi dalam perawatan saya, sepanjang di bawah supervise Dokter Penanggung Jawab Pasien (DPKP). </h5>
 
-      <!-- 3 -->
-      <h5>&nbsp;&nbsp;&nbsp;&nbsp;3. Saya setuju untuk dirujuk ke Instansi pelayanan lain yang telah ditentukan atau disepakati bersama bila dibutuhkan<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tindakan atau pelayanan lain yang tersedia di Rumah Sakit.</h5>
+        <!-- 3 -->
+        <h5>&nbsp;&nbsp;&nbsp;&nbsp;3. Saya setuju untuk dirujuk ke Instansi pelayanan lain yang telah ditentukan atau disepakati bersama bila dibutuhkan<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tindakan atau pelayanan lain yang tersedia di Rumah Sakit.</h5>
 
-      <!-- 4 -->
-      <h5>&nbsp;&nbsp;&nbsp;&nbsp;4. Saya setuju bila Rumah Sakit melakukan tindakan pertolongan sesuai kebutuhan medis pasien termasuk dalam<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keadaan gawat darurat dengan pemberi informasi dan persetujuan lisan terlebih dahulu dan kemudian persetujuan<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tertulis dilakukan setelah kondisi memungkinkan.</h5>
+        <!-- 4 -->
+        <h5>&nbsp;&nbsp;&nbsp;&nbsp;4. Saya setuju bila Rumah Sakit melakukan tindakan pertolongan sesuai kebutuhan medis pasien termasuk dalam<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keadaan gawat darurat dengan pemberi informasi dan persetujuan lisan terlebih dahulu dan kemudian persetujuan<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tertulis dilakukan setelah kondisi memungkinkan.</h5>
 
 
-      <h4 class="mt-3">III. KERAHASIAAN INFORMASI, PRIVASI DAN PELEPASAN INFORMASI</h4>
+        <h4 class="mt-3">III. KERAHASIAAN INFORMASI, PRIVASI DAN PELEPASAN INFORMASI</h4>
 
-      <!-- 1 -->
-      <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Saya memberi kuasa kepada setiap dan seluruh orang yang merawat saya untuk memeriksa dan/atau<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memberitahukan iinformasi kesehatan saya kepada pemberi kesehatan lain yang turut merawat saya selama di Rumah<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sakit ini.</h5>
+        <!-- 1 -->
+        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Saya memberi kuasa kepada setiap dan seluruh orang yang merawat saya untuk memeriksa dan/atau<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memberitahukan iinformasi kesehatan saya kepada pemberi kesehatan lain yang turut merawat saya selama di Rumah<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sakit ini.</h5>
 
-      <!-- 2 -->
-      <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Saya memberi wewenang kepada Rumah Sakit untuk memberikan informasi tentang diagnosis, hasil pelayanan dan<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pengobatan yang diperlukan untuk proses klaim asuransi kesehatan/perusahaan dan atau lembaga pemerintahan.</h5>
+        <!-- 2 -->
+        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Saya memberi wewenang kepada Rumah Sakit untuk memberikan informasi tentang diagnosis, hasil pelayanan dan<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pengobatan yang diperlukan untuk proses klaim asuransi kesehatan/perusahaan dan atau lembaga pemerintahan.</h5>
 
-      <!-- 3 -->
-      <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Saya setuju Rumah Sakit wajib menjamin kerahasiaan informasi medis saya baik untuk kepentingan perawatan dan<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pengobatan, pendidikan maupun penelitian kecuali saya mengungkapkan sendiri atau orang lain yang saya beri kuasa<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;untuk itu.</h5>
+        <!-- 3 -->
+        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Saya setuju Rumah Sakit wajib menjamin kerahasiaan informasi medis saya baik untuk kepentingan perawatan dan<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pengobatan, pendidikan maupun penelitian kecuali saya mengungkapkan sendiri atau orang lain yang saya beri kuasa<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;untuk itu.</h5>
 
-      <!-- 4 -->
-      <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Saya <select name="v_04" id="v_04">
-          <option selected>Pilih</option>
-          <option value="1">memberikan</option>
-          <option value="2">tidak memberikan</option>
-        </select>&nbsp;(*coret salah satu), wewenang kepada Rumah Sakit untuk memberikan data<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dan informasi kesehatan saya kepada keluarga saya, yaitu:</h5>
+        <!-- 4 -->
+        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Saya <select name="t_01" id="t_01_saya">
+            <option selected>Pilih</option>
+            <option value="1">memberikan</option>
+            <option value="2">tidak memberikan</option>
+          </select>&nbsp;(*coret salah satu), wewenang kepada Rumah Sakit untuk memberikan data<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dan informasi kesehatan saya kepada keluarga saya, yaitu:</h5>
 
-      <!-- a -->
-      <form>
-        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. <input type="text" name="v_05" id="v_05" placeholder="isi"></h5>
+        <!-- a -->
+
+        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. <input type="text" name="v_01" id="v_01" placeholder="isi"></h5>
 
         <!-- b -->
-        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. <input type="text" name="v_06" id="v_06" placeholder="isi"></h5>
+        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. <input type="text" name="v_02" id="v_02" placeholder="isi"></h5>
 
         <!-- c -->
-        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. <input type="text" name="v_07" id="v_07" placeholder="isi"></h5>
-      </form>
+        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. <input type="text" name="v_03" id="v_03" placeholder="isi"></h5>
 
-      <!-- 5 -->
-      <h5 class="mt-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. Pengambilan dokumentasi saya berupa foto, rekaman wawancara di luar kepentingan keperawatan dan pengobatan<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;harus seijin saya.</h5>
 
-      <!-- 6 -->
-      <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6. Saya <select name="v_08" id="v_08">
-          <option selected>Pilih</option>
-          <option value="1">menginginkan</option>
-          <option value="2">tidak menginginkan</option>
-        </select>&nbsp;(*coret salah satu)privasi khusus, jika ada&nbsp;<input type="text" name="v_09" id="v_09" placeholder="isi">&nbsp;dan tidak<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ingin dikunjungi oleh <input type="text" name="v_10" id="v_10" placeholder="isi"></h5>
+        <!-- 5 -->
+        <h5 class="mt-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. Pengambilan dokumentasi saya berupa foto, rekaman wawancara di luar kepentingan keperawatan dan pengobatan<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;harus seijin saya.</h5>
 
-      <!-- alert -->
-      <h5 class="mt-3"><b>Dengan ini saya menyatakan bahwa saya telah menerima informasi sebagaimana di atas dan telah<br><select name="v_11" id="v_11">
+        <!-- 6 -->
+        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6. Saya <select name="t_02" id="t_02_saya">
             <option selected>Pilih</option>
-            <option value="1">memahami</option>
-            <option value="2">tidak memahami</option>
-          </select>&nbsp;(*coret salah satu)</b></h5>
+            <option value="1">menginginkan</option>
+            <option value="2">tidak menginginkan</option>
+          </select>&nbsp;(*coret salah satu)privasi khusus, jika ada&nbsp;<input type="text" name="v_04" id="v_04" placeholder="isi">&nbsp;dan tidak<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ingin dikunjungi oleh <input type="text" name="v_05" id="v_05" placeholder="isi"></h5>
 
-      <!-- TTD -->
-      <h5 class="mt-3"><b>UNTUK KONFIRMASI, SAYA MENANDATANGANI FORMULIR INI.</b></h5>
-    </div>
+        <!-- alert -->
+        <h5 class="mt-3"><b>Dengan ini saya menyatakan bahwa saya telah menerima informasi sebagaimana di atas dan telah<br><select name="t_03" id="t_03_menerimainformasi">
+              <option selected>Pilih</option>
+              <option value="1">memahami</option>
+              <option value="2">tidak memahami</option>
+            </select>&nbsp;(*coret salah satu)</b></h5>
 
-    <table class="table table-bordered mb-5">
-      <tr>
-        <td class="text-center">
-          Bengkulu,<input type="date" name="v_12" id="v_12">
-        </td>
-        <td class="text-center">
-          Jam: <input type="time" name="v_13" id="v_13"> WIB
-        </td>
-      </tr>
-      <tr>
-        <td class="text-center">
-          Disetujui oleh <select name="v_14" id="v_14">
-            <option selected>Pilih</option>
-            <option value="1">Pasien</option>
-            <option value="2">Keluarga Pasien</option>
-          </select>
-        </td>
-        <td class="text-center">
-          Saksi,
-        </td>
-        <td class="text-center">
-          Petugas
-        </td>
-      </tr>
-      <tr>
-        <td class="text-center">
-          Hubungan dengan pasien
-        </td>
-        <td>
-          &nbsp;
-        </td>
-        <td>
-          &nbsp;
-        </td>
-      </tr>
-      <tr>
-        <td class="text-center">
-          <div id="sig"></div>
-        </td>
-        <td class="text-center">
-          <div id="sig1"></div>
-        </td>
-        <td class="text-center">
-          <div id="sig2"></div>
-        </td>
-      </tr>
-      <tr>
-        <td class="text-center">
-          <input type="text" name="v_15" id="v_15" style="width: 150px;">
-        </td>
-        <td class="text-center">
-          <input type="text" name="v_16" id="v_16" style="width: 150px;">
-        </td>
-        <td class="text-center">
-          <input type="text" name="v_17" id="v_17" style="width: 150px;">
-        </td>
-      </tr>
-    </table>
+        <!-- TTD -->
+        <h5 class="mt-3"><b>UNTUK KONFIRMASI, SAYA MENANDATANGANI FORMULIR INI.</b></h5>
+      </div>
+
+      <table class="table table-bordered mb-5">
+        <tr>
+          <td class="text-center">
+            Bengkulu,<input type="date" name="v_06" id="v_06">
+          </td>
+          <td class="text-center">
+            Jam: <input type="time" name="v_07" id="v_07"> WIB
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            Disetujui oleh * <select name="t_04" id="t_04_disetujui">
+              <option selected>Pilih</option>
+              <option value="1">Pasien</option>
+              <option value="2">Keluarga Pasien</option>
+            </select>
+          </td>
+          <td class="text-center">
+            Saksi, **
+          </td>
+          <td class="text-center">
+            Petugas
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            Hubungan dengan pasien
+          </td>
+          <td>
+            &nbsp;
+          </td>
+          <td>
+            &nbsp;
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            <div id="sig"></div>
+          </td>
+          <td class="text-center">
+            <div id="sig1"></div>
+          </td>
+          <td class="text-center">
+            <div id="sig2"></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            <input type="text" name="v_08" id="v_08" style="width: 150px;">
+          </td>
+          <td class="text-center">
+            <input type="text" name="v_09" id="v_09" style="width: 150px;">
+          </td>
+          <td class="text-center">
+            <input type="text" name="v_10" id="v_10" style="width: 150px;">
+          </td>
+        </tr>
+      </table>
+      <table class="mt-0 mb-3">
+        <tr>
+          <td>
+            <p>*) Bila Pasien tidak kompeten untuk membaca, memahami dan menyetujui, maka persetujuan ditandtangani oleh keluarga pasien.</p>
+            <p>**) Saksi berasal dari pihak pasien (seperti keluarga pasien) atau ditentukan oleh pihak rumah sakit bila ada.</p>
+          </td>
+        </tr>
+      </table>
+      <div class="mb-3">
+        <a class="btn form-control"><i class="fa fa-save"></i> SAVE</a>
+      </div>
     </form>
-    <div class="mb-3">
-      <a class="btn form-control"><i class="fa fa-save"></i> SAVE</a>
-    </div>
   </div>
 
 

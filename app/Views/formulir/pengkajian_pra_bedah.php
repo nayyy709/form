@@ -252,7 +252,7 @@ foreach ($dataAssessmentform2 as $row) {
               <label class="align-items-center">6. Alternatif :</label>
             </div>
             <div class="col-8">
-              <input class="form-control" type="text" name="v_16" id="v_16">
+              <input class="form-control" type="text" name="v_10" id="v_10">
             </div>
           </div>
 
@@ -261,7 +261,7 @@ foreach ($dataAssessmentform2 as $row) {
               <label class="align-items-center">7. Resiko dan rencana prosedur operasi :</label>
             </div>
             <div class="col-8">
-              <input class="form-control" type="text" name="v_17" id="v_17">
+              <input class="form-control" type="text" name="v_11" id="v_11">
             </div>
           </div>
 
@@ -270,7 +270,7 @@ foreach ($dataAssessmentform2 as $row) {
               <label class="align-items-center">8. Potensial Komplikasi :</label>
             </div>
             <div class="col-8">
-              <input class="form-control" type="text" name="v_18" id="v_18">
+              <input class="form-control" type="text" name="v_12" id="v_12">
             </div>
           </div>
 
@@ -279,7 +279,7 @@ foreach ($dataAssessmentform2 as $row) {
               <label class="align-items-center">9. Keuntungan dari prosedur operasi ini :</label>
             </div>
             <div class="col-8">
-              <input class="form-control" type="text" name="v_19" id="v_19">
+              <input class="form-control" type="text" name="v_13" id="v_13">
             </div>
           </div>
 
@@ -288,7 +288,7 @@ foreach ($dataAssessmentform2 as $row) {
               <label class="align-items-center">10. Transfusi(optional) :</label>
             </div>
             <div class="col-8">
-              <input class="form-control" type="text" name="v_20" id="v_20">
+              <input class="form-control" type="text" name="v_14" id="v_14">
             </div>
           </div>
 
@@ -308,7 +308,7 @@ foreach ($dataAssessmentform2 as $row) {
               <label class="align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b.Sebagai</label>
             </div>
             <div class="col-2">
-              <select class="form-control" name="v_21" name="v_21">
+              <select class="form-control" id="t_01_sebagai" name="t_01">
                 <option selected>Pilih</option>
                 <option value="1">Pasien</option>
                 <option value="2">Wali</option>
@@ -319,7 +319,7 @@ foreach ($dataAssessmentform2 as $row) {
               <label class="align-items-center">,hubungan</label>
             </div>
             <div class="col-8">
-              <input class="form-control" type="text" name="v_22" id="v_22">
+              <input class="form-control" type="text" name="v_15" id="v_15">
             </div>
           </div>
 
@@ -332,7 +332,7 @@ foreach ($dataAssessmentform2 as $row) {
 
           <div class="row align-items-center">
             <div class="col">
-              <textarea class="form-control" name="v_23" id="v_23" cols="6" rows="2"></textarea>
+              <textarea class="form-control" name="v_16" id="v_16" cols="6" rows="2"></textarea>
             </div>
           </div>
           <br>
@@ -343,7 +343,7 @@ foreach ($dataAssessmentform2 as $row) {
           </div>
           <div>
             <br>
-            <input class="mb-3" type="text" name="v_24" id="v_24" placeholder="Tanda tangan dan nama lengkap" size="25">
+            <input class="mb-3" type="text" name="v_17" id="v_17" placeholder="Tanda tangan dan nama lengkap" size="25">
           </div>
 
           <div>
