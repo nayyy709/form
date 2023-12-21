@@ -167,8 +167,6 @@
 <body>
 
   <div class="container mt-3">
-    <?php foreach ($dataAssessmentform1 as $row) {
-    }; ?>
     <a class="btn" href="<?= site_url('home/index') ?>"><i class="fa fa-arrow-left"></i></a>
     <div style="text-align: right;">
       <h2>RM 08</h2>
@@ -192,7 +190,7 @@
                 <label>No RM</label>
               </div>
               <div class="col-7">
-                <input class="form-control" type="text" name="no_Registration" id="no_Registration" value="<?php echo $row->NO_REGISTRATION ?>" readonly>
+                <input class="form-control" type="text" name="no_Registration" id="no_Registration" value="" readonly>
               </div>
             </div>
 
@@ -201,7 +199,7 @@
                 <label>Nama Lengkap</label>
               </div>
               <div class="col-7">
-                <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $row->THENAME ?>" readonly>
+                <input class="form-control" type="text" name="thename" id="thename" value="" readonly>
               </div>
             </div>
 
@@ -210,13 +208,13 @@
                 <label>Tanggal Lahir</label>
               </div>
               <div class="col-3">
-                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $row->DATE_OF_BIRTH ?>" readonly>
+                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="" readonly>
               </div>
               <div class="col-md-1">
                 <label>Umur</label>
               </div>
               <div class="col-3">
-                <input class="form-control" type="text" name="ageyear" id="ageyear" value="<?php echo $row->AGEYEAR ?> " readonly>
+                <input class="form-control" type="text" name="ageyear" id="ageyear" value="" readonly>
               </div>
             </div>
 
@@ -226,7 +224,7 @@
               </div>
               <div class="col-2">
                 <div class="form-input">
-                  <input type="text" class="form-control" name="gender" id="gender" value="<?php echo $row->GENDER ?>" readonly>
+                  <input type="text" class="form-control" name="gender" id="gender" value="" readonly>
                 </div>
               </div>
             </div>
@@ -236,7 +234,7 @@
                 <label>Alamat</label>
               </div>
               <div class="col-7">
-                <textarea class="form-control" name="theaddress" id="theaddress" cols="6" rows="2" readonly><?php echo $row->THEADDRESS ?></textarea>
+                <textarea class="form-control" name="theaddress" id="theaddress" cols="6" rows="2" readonly></textarea>
               </div>
             </div>
 
@@ -254,7 +252,7 @@
                 <label>Ruangan</label>
               </div>
               <div class="col-7">
-                <input class="form-control" type="text" name="class_room_id" id="class_room_id" value="<?php echo $row->CLASS_ROOM_ID ?>" readonly>
+                <input class="form-control" type="text" name="class_room_id" id="class_room_id" value="" readonly>
               </div>
             </div>
 
@@ -263,7 +261,7 @@
                 <label>Tanggal dan Pukul</label>
               </div>
               <div class="col-5">
-                <input class="form-control" type="datetime-local" name="examination_date" id="examination_date" value="<?php echo $row->EXAMINATION_DATE ?>" readonly>
+                <input class="form-control" type="datetime-local" name="examination_date" id="examination_date" value="" readonly>
               </div>
             </div>
 

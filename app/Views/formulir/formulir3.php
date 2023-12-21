@@ -1,12 +1,3 @@
-<?php
-$db = db_connect();
-
-foreach ($dataAssessmentform3 as $row) {
-};
-?>
-
-
-
 <!doctype html>
 <html lang="en">
 
@@ -131,7 +122,7 @@ foreach ($dataAssessmentform3 as $row) {
 
   <div class="container mt-5">
     <a class="btn mb-5" href="<?= site_url('home/index') ?>"><i class="fa fa-arrow-left"></i></a>
-    <form>
+    <form action="<?= site_url('addform/add_aksi') ?>" method="post">
       <table class="table table-bordered">
         <tr>
           <td align="right">
@@ -151,7 +142,7 @@ foreach ($dataAssessmentform3 as $row) {
                 <label>No.MR:</label>
               </div>
               <div class="col-8">
-                <input class="form-control" type="text" name="no_Registration" id="no_Registration" placeholder="No.MR" value="<?php echo $row->NO_REGISTRATION ?>" readonly>
+                <input class="form-control" type="text" name="no_Registration" id="no_Registration" placeholder="No.MR" value="" readonly>
               </div>
             </div>
 
@@ -160,7 +151,7 @@ foreach ($dataAssessmentform3 as $row) {
                 <label>Nama Lengkap</label>
               </div>
               <div class="col-8">
-                <input class="form-control" type="text" name="thename " id="thename  " placeholder="Nama Lengkap" value="<?php echo $row->THENAME ?>" readonly>
+                <input class="form-control" type="text" name="thename " id="thename  " placeholder="Nama Lengkap" value="" readonly>
               </div>
             </div>
 
@@ -169,7 +160,7 @@ foreach ($dataAssessmentform3 as $row) {
                 <label>Tanggal Lahir</label>
               </div>
               <div class="col-8">
-                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $row->DATE_OF_BIRTH ?>" readonly>
+                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="" readonly>
               </div>
             </div>
           </td>
@@ -329,7 +320,7 @@ foreach ($dataAssessmentform3 as $row) {
         </tr>
       </table>
       <div class="mb-3">
-        <a class="btn form-control"><i class="fa fa-save"></i> SAVE</a>
+        <input type="submit" name="submit" class="btn form-control"></input>
       </div>
     </form>
   </div>

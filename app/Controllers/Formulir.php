@@ -18,52 +18,16 @@ class Formulir extends BaseController
         $this->mdata = new Assessment_model();
     }
 
-    public function index(): string
+    public function index()
     {
         return view('halaman_utama');
     }
-    public function form1(): string
+
+    public function datapasien()
     {
 
-        $tampildata =  $this->mdata->tampildata();
+        $datatabel['daftarpasien'] = $this->mdata->tampilsemuadata();
 
-        $info = array(
-            'dataAssessmentform1' => $tampildata,
-        );
-
-        return view('formulir/form_persetujuan_tindakan', $info);
-    }
-    public function form2(): string
-    {
-
-        $tampildata =  $this->mdata->tampildata();
-
-        $info = array(
-            'dataAssessmentform2' => $tampildata,
-        );
-
-        return view('formulir/pengkajian_pra_bedah', $info);
-    }
-    public function form3(): string
-    {
-
-        $tampildata =  $this->mdata->tampildata();
-
-        $info = array(
-            'dataAssessmentform3' => $tampildata,
-        );
-
-        return view('formulir/inform_consent', $info);
-    }
-    public function form4(): string
-    {
-
-        $tampildata =  $this->mdata->tampildata();
-
-        $info = array(
-            'dataAssessmentform4' => $tampildata,
-        );
-
-        return view('formulir/pengkajian_awal_keperawatan_dan_medis_pasien_rawat_inap_dewasa', $info);
+        return view('dashboard/datapasien', $datatabel);
     }
 }

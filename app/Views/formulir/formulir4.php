@@ -1,12 +1,3 @@
-<?php
-$db = db_connect();
-
-foreach ($dataAssessmentform4 as $row) {
-};
-?>
-
-
-
 <!doctype html>
 <html lang="en">
 
@@ -395,6 +386,7 @@ foreach ($dataAssessmentform4 as $row) {
         if ($("#t_017_lainnya").is(":checked")) {
           $("#v_23").removeAttr("disabled");
           $("#v_23").removeAttr("disabled");
+          $("#v_23").focus();
         } else {
           $("#v_23").attr("disabled", true);
           $("#v_23").val("");
@@ -792,7 +784,7 @@ foreach ($dataAssessmentform4 as $row) {
     }
 
     function fungsi7_enable() {
-      $("#v_43").attr("disabled", true);
+      $("#v_44").attr("disabled", true);
       if (this.click) {
         $("#v_44").removeAttr("disabled");
         $("#v_44").focus();
@@ -1134,6 +1126,7 @@ foreach ($dataAssessmentform4 as $row) {
       if (this.click) {
         $("input.hambatan5").attr("disabled", true);
         $("input.hambatan5").prop("checked", false);
+
       } else {
         $("input.hambatan5").removeAttr("disabled");
       }
@@ -1142,6 +1135,7 @@ foreach ($dataAssessmentform4 as $row) {
     function fungsi32_enable() {
       if (this.click) {
         $("input.hambatan5").removeAttr("disabled");
+        $("#t_077").focus();
       } else {
         $("input.hambatan5").attr("disabled", true);
       }
@@ -1213,57 +1207,58 @@ foreach ($dataAssessmentform4 as $row) {
   </script>
   <!-- fungs disabled mobilisasi -->
 
+  <!-- fungsi disabled skrining nyeri -->
   <script type="text/javascript">
     $(function f15() {
       $("input[name='t_093']").click(function f15() {
         if ($("#t_093_ya").is(":checked")) {
           $("#t_094_pain").removeAttr("disabled");
-          $("#t_084_wong").removeAttr("disabled");
+          $("#t_096_wong").removeAttr("disabled");
           $("#v_61").removeAttr("disabled");
-          $("#t_085_tumpul").removeAttr("disabled");
-          $("#t_085_tajam").removeAttr("disabled");
-          $("#t_085_panas").removeAttr("disabled");
+          $("#t_098_tumpul").removeAttr("disabled");
+          $("#t_098_tajam").removeAttr("disabled");
+          $("#t_098_panas").removeAttr("disabled");
           $("#v_62").removeAttr("disabled");
-          $("#t_086_tidak").removeAttr("disabled");
-          $("#t_086_ya").removeAttr("disabled");
+          $("#t_099_tidak").removeAttr("disabled");
+          $("#t_099_ya").removeAttr("disabled");
           $("#v_63").removeAttr("disabled");
-          $("#t_087_jarang").removeAttr("disabled");
-          $("#t_087_hilangtimbul").removeAttr("disabled");
-          $("#t_087_terusmenerus").removeAttr("disabled");
+          $("#t_100_jarang").removeAttr("disabled");
+          $("#t_100_hilangtimbul").removeAttr("disabled");
+          $("#t_100_terusmenerus").removeAttr("disabled");
           $("#v_64").removeAttr("disabled");
         } else {
           $("#t_094_pain").attr("disabled", true);
           $("#t_094_pain").prop("checked", false);
-          $("#t_088_rangepain").attr("disabled", true);
-          $("#t_088_rangepain").prop("checked", false);
-          $("#t_088_rangepain").val("0");
-          $("#t_084_wong").attr("disabled", true);
-          $("#t_084_wong").prop("checked", false);
-          $("#t_089_rangewong").attr("disabled", true);
-          $("#t_089_rangewong").prop("checked", false);
-          $("#t_089_rangewong").val("0");
+          $("#t_095_rangepain").attr("disabled", true);
+          $("#t_095_rangepain").prop("checked", false);
+          $("#t_095_rangepain").val("0");
+          $("#t_096_wong").attr("disabled", true);
+          $("#t_096_wong").prop("checked", false);
+          $("#t_097_rangewong").attr("disabled", true);
+          $("#t_097_rangewong").prop("checked", false);
+          $("#t_097_rangewong").val("0");
           $("#v_61").attr("disabled", true);
           $("#v_61").val("");
-          $("#t_085_tumpul").attr("disabled", true);
-          $("#t_085_tumpul").prop("checked", false);
-          $("#t_085_tajam").attr("disabled", true);
-          $("#t_085_tajam").prop("checked", false);
-          $("#t_085_panas").attr("disabled", true);
-          $("#t_085_panas").prop("checked", false);
+          $("#t_098_tumpul").attr("disabled", true);
+          $("#t_098_tumpul").prop("checked", false);
+          $("#t_098_tajam").attr("disabled", true);
+          $("#t_098_tajam").prop("checked", false);
+          $("#t_098_panas").attr("disabled", true);
+          $("#t_098_panas").prop("checked", false);
           $("#v_62").attr("disabled", true);
           $("#v_62").val("");
-          $("#t_086_tidak").attr("disabled", true);
-          $("#t_086_tidak").prop("checked", false);
-          $("#t_086_ya").attr("disabled", true);
-          $("#t_086_ya").prop("checked", false);
+          $("#t_099_tidak").attr("disabled", true);
+          $("#t_099_tidak").prop("checked", false);
+          $("#t_099_ya").attr("disabled", true);
+          $("#t_099_ya").prop("checked", false);
           $("#v_63").attr("disabled", true);
           $("#v_63").val("");
-          $("#t_087_jarang").attr("disabled", true);
-          $("#t_087_jarang").prop("checked", false);
-          $("#t_087_hilangtimbul").attr("disabled", true);
-          $("#t_087_hilangtimbul").prop("checked", false);
-          $("#t_087_terusmenerus").attr('disabled', true);
-          $("#t_087_terusmenerus").prop("checked", false);
+          $("#t_100_jarang").attr("disabled", true);
+          $("#t_100_jarang").prop("checked", false);
+          $("#t_100_hilangtimbul").attr("disabled", true);
+          $("#t_100_hilangtimbul").prop("checked", false);
+          $("#t_100_terusmenerus").attr('disabled', true);
+          $("#t_100_terusmenerus").prop("checked", false);
           $("#v_64").attr("disabled", true);
           $("#v_64").val("");
         }
@@ -1273,13 +1268,13 @@ foreach ($dataAssessmentform4 as $row) {
 
   <script type="text/javascript">
     $(function f15() {
-      $("input[name='t_083']").click(function f15() {
-        if ($("#t_083_pain").is(":checked")) {
-          $("#t_088_rangepain").removeAttr("disabled");
+      $("input[name='t_094']").click(function f15() {
+        if ($("#t_094_pain").is(":checked")) {
+          $("#t_095_rangepain").removeAttr("disabled");
         } else {
-          $("#t_088_rangepain").attr("disabled", true);
-          $("#t_088_rangepain").prop("checked", false);
-          $("#t_088_rangepain").val("0");
+          $("#t_095_rangepain").attr("disabled", true);
+          $("#t_095_rangepain").prop("checked", false);
+          $("#t_095_rangepain").val("0");
         }
       });
     });
@@ -1287,22 +1282,24 @@ foreach ($dataAssessmentform4 as $row) {
 
   <script type="text/javascript">
     $(function f15() {
-      $("input[name='t_084']").click(function f15() {
-        if ($("#t_084_wong").is(":checked")) {
-          $("#t_089_rangewong").removeAttr("disabled");
+      $("input[name='t_096']").click(function f15() {
+        if ($("#t_096_wong").is(":checked")) {
+          $("#t_097_rangewong").removeAttr("disabled");
         } else {
-          $("#t_089_rangewong").attr("disabled", true);
-          $("#t_089_rangewong").prop("checked", false);
-          $("#t_089_rangewong").val("0");
+          $("#t_097_rangewong").attr("disabled", true);
+          $("#t_097_rangewong").prop("checked", false);
+          $("#t_097_rangewong").val("0");
         }
       });
     });
   </script>
+  <!-- fungsi disabled skrining nyeri -->
 
+  <!-- fungsi disabled nyeri hilang lainnya -->
   <script type="text/javascript">
     $(function f16() {
-      $("input[name='t_090']").click(function f16() {
-        if ($("#t_090_lainnya").is(":checked")) {
+      $("input[name='t_103']").click(function f16() {
+        if ($("#t_103_lainnya").is(":checked")) {
           $("#v_65").removeAttr("disabled");
           $("#v_65").focus();
         } else {
@@ -1312,14 +1309,15 @@ foreach ($dataAssessmentform4 as $row) {
       });
     });
   </script>
+  <!-- fungsi disabled nyeri hilang lainnya -->
 
   <!-- sum1 -->
   <script>
     $(function() {
       $('input.jumlah').click(function() {
 
-        var nilai1 = parseInt($('input[name="t_091"]:checked').val());
-        var nilai2 = parseInt($('input[name="t_092"]:checked').val());
+        var nilai1 = parseInt($('input[name="t_106"]:checked').val());
+        var nilai2 = parseInt($('input[name="t_107"]:checked').val());
 
         if (isNaN(nilai1)) {
           nilai1 = 0;
@@ -1329,47 +1327,48 @@ foreach ($dataAssessmentform4 as $row) {
           nilai2 = 0;
         }
 
-        $('#t_095').val(nilai1 + nilai2);
+        $('#t_108').val(nilai1 + nilai2);
       });
     });
   </script>
   <!-- sum1 -->
 
+  <!-- fungsi disabled pasien dengan diagnosa khusus -->
   <script type="text/javascript">
     $(function f17() {
-      $("input[name='t_093']").click(function f17() {
-        if ($("#t_093_ya").is(":checked")) {
-          $("#t_094_dm").removeAttr("disabled");
-          $("#t_094_ginjal").removeAttr("disabled");
-          $("#t_094_hati").removeAttr("disabled");
-          $("#t_094_paru").removeAttr("disabled");
-          $("#t_094_stroke").removeAttr("disabled");
-          $("#t_094_kanker").removeAttr("disabled");
-          $("#t_094_geriatri").removeAttr("disabled");
-          $("#t_094_jantung").removeAttr("disabled");
-          $("#t_094_lainnya").removeAttr("disabled");
-          $("#t_094_imun").removeAttr("disabled");
+      $("input[name='t_109']").click(function f17() {
+        if ($("#t_109_ya").is(":checked")) {
+          $("#t_110_dm").removeAttr("disabled");
+          $("#t_111_ginjal").removeAttr("disabled");
+          $("#t_112_hati").removeAttr("disabled");
+          $("#t_113_paru").removeAttr("disabled");
+          $("#t_114_stroke").removeAttr("disabled");
+          $("#t_115_kanker").removeAttr("disabled");
+          $("#t_116_geriatri").removeAttr("disabled");
+          $("#t_117_jantung").removeAttr("disabled");
+          $("#t_118_lainnya").removeAttr("disabled");
+          $("#t_119_imun").removeAttr("disabled");
         } else {
-          $("#t_094_dm").attr("disabled", true);
-          $("#t_094_dm").prop("checked", false);
-          $("#t_094_ginjal").attr("disabled", true);
-          $("#t_094_ginjal").prop("checked", false);
-          $("#t_094_hati").attr("disabled", true);
-          $("#t_094_hati").prop("checked", false);
-          $("#t_094_paru").attr("disabled", true);
-          $("#t_094_paru").prop("checked", false);
-          $("#t_094_stroke").attr("disabled", true);
-          $("#t_094_stroke").prop("checked", false);
-          $("#t_094_kanker").attr("disabled", true);
-          $("#t_094_kanker").prop("checked", false);
-          $("#t_094_geriatri").attr("disabled", true);
-          $("#t_094_geriatri").prop("checked", false);
-          $("#t_094_jantung").attr("disabled", true);
-          $("#t_094_jantung").prop("checked", false);
-          $("#t_094_lainnya").attr("disabled", true);
-          $("#t_094_lainnya").prop("checked", false);
-          $("#t_094_imun").attr("disabled", true);
-          $("#t_094_imun").prop("checked", false);
+          $("#t_110_dm").attr("disabled", true);
+          $("#t_110_dm").prop("checked", false);
+          $("#t_111_ginjal").attr("disabled", true);
+          $("#t_111_ginjal").prop("checked", false);
+          $("#t_112_hati").attr("disabled", true);
+          $("#t_112_hati").prop("checked", false);
+          $("#t_113_paru").attr("disabled", true);
+          $("#t_113_paru").prop("checked", false);
+          $("#t_114_stroke").attr("disabled", true);
+          $("#t_114_stroke").prop("checked", false);
+          $("#t_115_kanker").attr("disabled", true);
+          $("#t_115_kanker").prop("checked", false);
+          $("#t_116_geriatri").attr("disabled", true);
+          $("#t_116_geriatri").prop("checked", false);
+          $("#t_117_jantung").attr("disabled", true);
+          $("#t_117_jantung").prop("checked", false);
+          $("#t_118_lainnya").attr("disabled", true);
+          $("#t_118_lainnya").prop("checked", false);
+          $("#t_119_imun").attr("disabled", true);
+          $("#t_119_imun").prop("checked", false);
           $("#v_66").attr("disabled", true);
           $("#v_66").val("");
         }
@@ -1379,8 +1378,8 @@ foreach ($dataAssessmentform4 as $row) {
 
   <script type="text/javascript">
     $(function f17() {
-      $("input[name='t_094']").click(function f17() {
-        if ($("#t_094_lainnya").is(":checked")) {
+      $("input[name='t_118']").click(function f17() {
+        if ($("#t_118_lainnya").is(":checked")) {
           $("#v_66").removeAttr("disabled");
           $("#v_66").focus();
         } else {
@@ -1390,18 +1389,19 @@ foreach ($dataAssessmentform4 as $row) {
       });
     });
   </script>
+  <!-- fungsi disabled pasien dengan diagnosa khusus -->
 
   <!-- sum2 -->
   <script>
     $(function() {
       $('input.jumlah2').click(function() {
 
-        var nilai3 = parseInt($('input[name="t_101"]:checked').val());
-        var nilai4 = parseInt($('input[name="t_102"]:checked').val());
-        var nilai5 = parseInt($('input[name="t_103"]:checked').val());
-        var nilai6 = parseInt($('input[name="t_104"]:checked').val());
-        var nilai7 = parseInt($('input[name="t_105"]:checked').val());
-        var nilai8 = parseInt($('input[name="t_106"]:checked').val());
+        var nilai3 = parseInt($('input[name="t_125"]:checked').val());
+        var nilai4 = parseInt($('input[name="t_126"]:checked').val());
+        var nilai5 = parseInt($('input[name="t_127"]:checked').val());
+        var nilai6 = parseInt($('input[name="t_128"]:checked').val());
+        var nilai7 = parseInt($('input[name="t_129"]:checked').val());
+        var nilai8 = parseInt($('input[name="t_130"]:checked').val());
 
         if (isNaN(nilai3)) {
           nilai3 = 0;
@@ -1433,32 +1433,33 @@ foreach ($dataAssessmentform4 as $row) {
   </script>
   <!-- sum2 -->
 
+  <!-- fungsi disabled hamabatan pembelajaran  -->
   <script type="text/javascript">
     $(function f18() {
-      $("input[name='t_110']").click(function f18() {
-        if ($("#t_110_ya").is(":checked")) {
-          $("#t_109_pendengaran").removeAttr("disabled");
-          $("#t_109_penglihatan").removeAttr("disabled");
-          $("#t_109_kognitif").removeAttr("disabled");
-          $("#t_109_emosi").removeAttr("disabled");
-          $("#t_109_budaya").removeAttr("disabled");
-          $("#t_109_bahasa").removeAttr("disabled");
-          $("#t_109_lainnya").removeAttr("disabled");
+      $("input[name='t_132']").click(function f18() {
+        if ($("#t_132_ya").is(":checked")) {
+          $("#t_133_pendengaran").removeAttr("disabled");
+          $("#t_134_penglihatan").removeAttr("disabled");
+          $("#t_135_kognitif").removeAttr("disabled");
+          $("#t_136_emosi").removeAttr("disabled");
+          $("#t_137_budaya").removeAttr("disabled");
+          $("#t_138_bahasa").removeAttr("disabled");
+          $("#t_139_lainnya").removeAttr("disabled");
         } else {
-          $("#t_109_pendengaran").attr("disabled", true);
-          $("#t_109_pendengaran").prop("checked", false);
-          $("#t_109_penglihatan").attr("disabled", true);
-          $("#t_109_penglihatan").prop("checked", false);
-          $("#t_109_kognitif").attr("disabled", true);
-          $("#t_109_kognitif").prop("checked", false);
-          $("#t_109_emosi").attr("disabled", true);
-          $("#t_109_emosi").prop("checked", false);
-          $("#t_109_budaya").attr("disabled", true);
-          $("#t_109_budaya").prop("cheked", false);
-          $("#t_109_bahasa").attr("disabled", true);
-          $("#t_109_bahasa").prop("checked", false);
-          $("#t_109_lainnya").attr("disabled", true);
-          $("#t_109_lainnya").prop("checked", false);
+          $("#t_133_pendengaran").attr("disabled", true);
+          $("#t_133_pendengaran").prop("checked", false);
+          $("#t_134_penglihatan").attr("disabled", true);
+          $("#t_134_penglihatan").prop("checked", false);
+          $("#t_135_kognitif").attr("disabled", true);
+          $("#t_135_kognitif").prop("checked", false);
+          $("#t_136_emosi").attr("disabled", true);
+          $("#t_136_emosi").prop("checked", false);
+          $("#t_137_budaya").attr("disabled", true);
+          $("#t_137_budaya").prop("cheked", false);
+          $("#t_138_bahasa").attr("disabled", true);
+          $("#t_138_bahasa").prop("checked", false);
+          $("#t_139_lainnya").attr("disabled", true);
+          $("#t_139_lainnya").prop("checked", false);
           $("#v_34").attr("disabled", true);
           $("#v_34").val("");
         }
@@ -1468,8 +1469,8 @@ foreach ($dataAssessmentform4 as $row) {
 
   <script type="text/javascript">
     $(function f18() {
-      $("input[name='t_109']").click(function f18() {
-        if ($("#t_109_lainnya").is(":checked")) {
+      $("input[name='t_139']").click(function f18() {
+        if ($("#t_139_lainnya").is(":checked")) {
           $("#v_34").removeAttr("disabled");
           $("#v_34").focus();
         } else {
@@ -1479,11 +1480,13 @@ foreach ($dataAssessmentform4 as $row) {
       });
     });
   </script>
+  <!-- fungsi disabled hamabatan pembelajaran  -->
 
+  <!-- fungsi disabled edukasi yang diperlukan -->
   <script type="text/javascript">
     $(function f19() {
-      $("input[name='t_111']").click(function f19() {
-        if ($("#t_111_lainnya").is(":checked")) {
+      $("input[name='t_148']").click(function f19() {
+        if ($("#t_148_lainnya").is(":checked")) {
           $("#v_69").removeAttr("disabled");
           $("#v_69").focus();
         } else {
@@ -1493,11 +1496,13 @@ foreach ($dataAssessmentform4 as $row) {
       });
     });
   </script>
+  <!-- fungsi disabled edukasi yang diperlukan -->
 
+  <!-- fungsi disabled dirujuk ke skrining perencanaan -->
   <script type="text/javascript">
     $(function f20() {
-      $("input[name='t_124']").click(function f20() {
-        if ($("#t_124_dirujuk").is(":checked")) {
+      $("input[name='t_159']").click(function f20() {
+        if ($("#t_159_dirujuk").is(":checked")) {
           $("#v_70").removeAttr("disabled");
           $("#v_70").focus();
         } else {
@@ -1510,19 +1515,20 @@ foreach ($dataAssessmentform4 as $row) {
 
   <script type="text/javascript">
     $(function f21() {
-      $("input[name='t_124']").click(function f21() {
-        if ($("#t_124_dirujuk").is(":checked")) {
-          $("#t_117_ya").removeAttr("disabled");
-          $("#t_117_tidak").removeAttr("disabled");
+      $("input[name='t_159']").click(function f21() {
+        if ($("#t_159_dirujuk").is(":checked")) {
+          $("#t_160_ya").removeAttr("disabled");
+          $("#t_160_tidak").removeAttr("disabled");
         } else {
-          $("#t_117_ya").attr("disabled", true);
-          $("#t_117_ya").prop("checked", false);
-          $("#t_117_tidak").attr("disabled", true);
-          $("#t_117_tidak").prop("checked", false);
+          $("#t_160_ya").attr("disabled", true);
+          $("#t_160_ya").prop("checked", false);
+          $("#t_160_tidak").attr("disabled", true);
+          $("#t_160_tidak").prop("checked", false);
         }
       })
     })
   </script>
+  <!-- fungsi disabled dirujuk ke skrining perencanaan -->
 
   <!-- fungsi decimal -->
   <script>
@@ -1571,15 +1577,15 @@ foreach ($dataAssessmentform4 as $row) {
         </td>
         <form action="<?= site_url('addform/add_aksi') ?>" method="post">
           <td>
-            <div class="row">
+            <div class="row align-items-center">
               <div class="col-5">
                 <label>No.RM</label>
               </div>
               <div class="col-7">
-                <input class="form-control" type="text" name="no_Registration" id="no_Registration" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
+                <input class="form-control" type="text" name="no_Registration" id="no_Registration" value="" readonly>
               </div>
             </div>
-            <div class="row">
+            <div class="row align-items-center">
               <div class="col-5">
                 <label>Nama Lengkap</label>
               </div>
@@ -1587,20 +1593,20 @@ foreach ($dataAssessmentform4 as $row) {
                 <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $row->THENAME; ?>" readonly>
               </div>
             </div>
-            <div class="row">
+            <div class="row align-items-center">
               <div class="col-5">
                 <label>Tanggal Lahir</label>
               </div>
               <div class="col-7">
-                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $row->DATE_OF_BIRTH; ?>" readonly>
+                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="" readonly>
               </div>
             </div>
-            <div class="row">
+            <div class="row align-items-center">
               <div class="col-5">
                 <label>NIK</label>
               </div>
               <div class="col-7">
-                <input class="form-control" type="text" name="thenik" id="thenik" value="<?php echo $row->THENIK; ?>" readonly>
+                <input class="form-control" type="text" name="thenik" id="thenik" value="" readonly>
               </div>
             </div>
           </td>
@@ -1616,7 +1622,7 @@ foreach ($dataAssessmentform4 as $row) {
     <table class="table table-bordered mb-0" style="border:1px solid black;">
       <tr>
         <td colspan="2">
-          <div class="row align-items-center">
+          <div class="row align-items-center mb-3">
             <div class="col-2">
               <label>Masuk Ruang Rawat :</label>
             </div>
@@ -1635,7 +1641,7 @@ foreach ($dataAssessmentform4 as $row) {
             <div class="col-3">
               <input class="form-control" type="datetime-local" name="examination_date" id="examination_date" readonly>
             </div>
-            <div class="row align-items-center">
+            <div class="row align-items-center mb-3">
               <div class="col-2 align-items-center">
                 <label>Sumber Data :</label>
               </div>
@@ -1673,7 +1679,7 @@ foreach ($dataAssessmentform4 as $row) {
                 </div>
               </div>
             </div>
-            <div class="row align-items-center">
+            <div class="row align-items-center mb-2">
               <label>Identitas Pasien</label>
             </div>
             <div class="row align-items-center">
@@ -1724,7 +1730,7 @@ foreach ($dataAssessmentform4 as $row) {
                 </div>
               </div>
             </div>
-            <div class="row align-items-center">
+            <div class="row align-items-center  mb-3">
               <div class="col-2"></div>
               <div class="col-md-1">
                 <div class="row align-items-center">
@@ -2880,7 +2886,7 @@ foreach ($dataAssessmentform4 as $row) {
             </div>
             <div class="col-2">
               <input class="form-check-input" type="checkbox" id="t_043_normal" name="t_043" value="1">
-              <label>Normal</label>
+              <label class="form-check-label" for="t_043_normal">Normal</label>
             </div>
           </div>
 
@@ -3885,7 +3891,7 @@ foreach ($dataAssessmentform4 as $row) {
                 <div class="row align-items-center">
                   <div>
 
-                    <input type="range" id="t_088_rangepain" name="t_088" min="0" max="10" value="0" list="markers" style="width: 83%;" disabled="disabled" />
+                    <input type="range" id="t_095_rangepain" name="t_095" min="0" max="10" value="0" list="markers" style="width: 83%;" disabled="disabled" />
 
                     <datalist id="markers">
                       <option value="0"></option>
@@ -3911,14 +3917,14 @@ foreach ($dataAssessmentform4 as $row) {
                   <div class="col-md-10">
                     <div class="col-12">
                       <br>
-                      <input class="form-check-input" type="checkbox" id="t_095_wong" name="t_095" value="2" disabled="disabled">
-                      <label class="form-check-label" for="t_095_wong">WONG-BAKER FACE PAIN Rating Scale</label>
+                      <input class="form-check-input" type="checkbox" id="t_096_wong" name="t_096" value="2" disabled="disabled">
+                      <label class="form-check-label" for="t_096_wong">WONG-BAKER FACE PAIN Rating Scale</label>
                     </div>
                   </div>
                   <div class="row align-items-center">
                     <div>
 
-                      <input type="range" id="t_089_rangewong" name="t_089" min="0" max="10" value="0" list="markers" style="width: 87%;" disabled="disabled" />
+                      <input type="range" id="t_097_rangewong" name="t_097" min="0" max="10" value="0" list="markers" style="width: 87%;" disabled="disabled" />
 
                       <datalist id="markers">
                         <option value="0"></option>
@@ -3960,16 +3966,16 @@ foreach ($dataAssessmentform4 as $row) {
                             <label>(Q) Quality</label>
                           </div>
                           <div class="col-3">
-                            <input class="form-check-input" type="radio" id="t_096_tumpul" name="t_096" value="1" disabled="disabled">
-                            <label class="form-check-label" for="t_096_tumpul">Tumpul</label>
+                            <input class="form-check-input" type="radio" id="t_098_tumpul" name="t_098" value="1" disabled="disabled">
+                            <label class="form-check-label" for="t_098_tumpul">Tumpul</label>
                           </div>
                           <div class="col-2">
-                            <input class="form-check-input" type="radio" id="t_096_tajam" name="t_096" value="2" disabled="disabled">
-                            <label class="form-check-label" for="t_096_tajam">Tajam</label>
+                            <input class="form-check-input" type="radio" id="t_098_tajam" name="t_098" value="2" disabled="disabled">
+                            <label class="form-check-label" for="t_098_tajam">Tajam</label>
                           </div>
                           <div class="col-2">
-                            <input class="form-check-input" type="radio" id="t_096_panas" name="t_096" value="3" disabled="disabled">
-                            <label class="form-check-label" for="t_096_panas">Panas</label>
+                            <input class="form-check-input" type="radio" id="t_098_panas" name="t_098" value="3" disabled="disabled">
+                            <label class="form-check-label" for="t_098_panas">Panas</label>
                           </div>
                         </div>
 
@@ -3987,12 +3993,12 @@ foreach ($dataAssessmentform4 as $row) {
                                 <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Menjalar</label>
                               </div>
                               <div class="col-3">
-                                <input class="form-check-input" type="radio" id="t_097_tidak" name="t_097" value="1" disabled="disabled">
-                                <label class="form-check-label" for="t_097_tidak">Tidak</label>
+                                <input class="form-check-input" type="radio" id="t_099_tidak" name="t_099" value="1" disabled="disabled">
+                                <label class="form-check-label" for="t_099_tidak">Tidak</label>
                               </div>
                               <div class="col-2">
-                                <input class="form-check-input" type="radio" id="t_097_ya" name="t_097" value="2" disabled="disabled">
-                                <label class="form-check-label" for="t_097_ya">Ya</label>
+                                <input class="form-check-input" type="radio" id="t_099_ya" name="t_099" value="2" disabled="disabled">
+                                <label class="form-check-label" for="t_099_ya">Ya</label>
                               </div>
                             </div>
                           </div>
@@ -4015,18 +4021,18 @@ foreach ($dataAssessmentform4 as $row) {
                             <div class="col-7">
                               <div class="row align-items-center">
                                 <div class="col-6">
-                                  <input class="form-check-input" type="radio" id="t_098_jarang" name="t_098" value="1" disabled="disabled">
-                                  <label class="form-check-label" for="t_098_jarang">Jarang</label>
+                                  <input class="form-check-input" type="radio" id="t_100_jarang" name="t_100" value="1" disabled="disabled">
+                                  <label class="form-check-label" for="t_100_jarang">Jarang</label>
                                 </div>
                                 <div class="col-6">
-                                  <input class="form-check-input" type="radio" id="t_098_hilangtimbul" name="t_098" value="2" disabled="disabled">
-                                  <label class="form-check-label" for="t_098_hilangtimbul">Hilang Timbul</label>
+                                  <input class="form-check-input" type="radio" id="t_100_hilangtimbul" name="t_100" value="2" disabled="disabled">
+                                  <label class="form-check-label" for="t_100_hilangtimbul">Hilang Timbul</label>
                                 </div>
                               </div>
                               <div class="row align-items-center">
                                 <div class="col-7">
-                                  <input class="form-check-input" type="radio" id="t_098_terusmenerus" name="t_098" value="3" disabled="disabled">
-                                  <label class="form-check-label" for="t_098_terusmenerus">Terus Menerus</label>
+                                  <input class="form-check-input" type="radio" id="t_100_terusmenerus" name="t_100" value="3" disabled="disabled">
+                                  <label class="form-check-label" for="t_100_terusmenerus">Terus Menerus</label>
                                 </div>
                               </div>
                             </div>
@@ -4055,16 +4061,16 @@ foreach ($dataAssessmentform4 as $row) {
           <div class="row align-items-center">
             <label>Nyeri Hilang/Berkurang apabila:</label>
             <div class="col-md-3">
-              <input class="form-check-input" type="checkbox" id="t_090_minumobat" name="t_090">
-              <label class="form-check-label" for="t_090_minumobat">Minum Obat</label>
+              <input class="form-check-input" type="checkbox" id="t_101_minumobat" name="t_101" value="1">
+              <label class="form-check-label" for="t_101_minumobat">Minum Obat</label>
             </div>
             <div class="col-md-2">
-              <input class="form-check-input" type="checkbox" id="t_090_istirahat" name="t_090">
-              <label class="form-check-label" for="t_090_istirahat">Istirahat</label>
+              <input class="form-check-input" type="checkbox" id="t_102_istirahat" name="t_102" value="3">
+              <label class="form-check-label" for="t_102_istirahat">Istirahat</label>
             </div>
             <div class="col-2">
-              <input class="form-check-input" type="checkbox" id="t_090_lainnya" name="t_090">
-              <label class="form-check-label" for="t_090_lainnya">Lain-lain, sebutkan</label>
+              <input class="form-check-input" type="checkbox" id="t_103_lainnya" name="t_103" value="5">
+              <label class="form-check-label" for="t_103_lainnya">Lain-lain, sebutkan</label>
             </div>
             <div class="col-4">
               <div class="form-input">
@@ -4075,12 +4081,12 @@ foreach ($dataAssessmentform4 as $row) {
 
           <div class="row align-items-center">
             <div class="col-md-3">
-              <input class="form-check-input" type="checkbox" id="t_090_musik" name="t_090">
-              <label class="form-check-label" for="t_090_musik">Mendengarkan musik</label>
+              <input class="form-check-input" type="checkbox" id="t_104_musik" name="t_104" value="2">
+              <label class="form-check-label" for="t_104_musik">Mendengarkan musik</label>
             </div>
             <div class="col-md-3">
-              <input class="form-check-input" type="checkbox" id="t_090_mengganti" name="t_090">
-              <label class="form-check-label" for="t_090_mengganti">Mengganti posisi tidur</label>
+              <input class="form-check-input" type="checkbox" id="t_105_mengganti" name="t_105" value="4">
+              <label class="form-check-label" for="t_105_mengganti">Mengganti posisi tidur</label>
             </div>
           </div>
 
@@ -4114,7 +4120,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td class="text-center">0</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input jumlah" type="radio" value="0" id="t_091_tidakmenurun" name="t_091">
+                  <input class="form-check-input jumlah" type="radio" value="0" id="t_106_tidakmenurun" name="t_106">
                 </div>
               </td>
             </tr>
@@ -4124,7 +4130,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td class="text-center">2</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input jumlah" type="radio" value="2" id="t_091_tidakyakin" name="t_091">
+                  <input class="form-check-input jumlah" type="radio" value="2" id="t_106_tidakyakin" name="t_106">
                 </div>
               </td>
             </tr>
@@ -4140,7 +4146,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td class="text-center">1</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input jumlah" type="radio" value="1" id="t_091_berat" name="t_091">
+                  <input class="form-check-input jumlah" type="radio" value="1" id="t_106_berat" name="t_106">
                 </div>
               </td>
             </tr>
@@ -4150,7 +4156,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td class="text-center">2</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input jumlah" type="radio" value="2" id="t_091_berat1" name="t_091">
+                  <input class="form-check-input jumlah" type="radio" value="2" id="t_106_berat1" name="t_106">
                 </div>
               </td>
             </tr>
@@ -4160,7 +4166,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td class="text-center">5</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input jumlah" type="radio" value="5" id="t_091_berat2" name="t_091">
+                  <input class="form-check-input jumlah" type="radio" value="5" id="t_106_berat2" name="t_106">
                 </div>
               </td>
             </tr>
@@ -4170,7 +4176,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td class="text-center">4</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input jumlah" type="radio" value="4" id="t_091_berat3" name="t_091">
+                  <input class="form-check-input jumlah" type="radio" value="4" id="t_106_berat3" name="t_106">
                 </div>
               </td>
             </tr>
@@ -4180,7 +4186,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td class="text-center">2</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input jumlah" type="radio" value="2" id="t_091_tidak" name="t_091">
+                  <input class="form-check-input jumlah" type="radio" value="2" id="t_106_tidak" name="t_106">
                 </div>
               </td>
             </tr>
@@ -4196,7 +4202,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td class="text-center">0</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input jumlah" type="radio" value="0" id="t_092_tidak" name="t_092">
+                  <input class="form-check-input jumlah" type="radio" value="0" id="t_107_tidak" name="t_107">
                 </div>
               </td>
             </tr>
@@ -4206,7 +4212,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td class="text-center">1</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input jumlah" type="radio" value="1" id="t_092_ya" name="t_092">
+                  <input class="form-check-input jumlah" type="radio" value="1" id="t_107_ya" name="t_107">
                 </div>
               </td>
             </tr>
@@ -4220,12 +4226,13 @@ foreach ($dataAssessmentform4 as $row) {
               <td></td>
               <td class="text-right"><strong>Total Skor</strong></td>
               <td>
-                <input type="text" size="7px" id="t_095" readonly />
+                <input type="text" size="7px" id="t_108" name="t_108 readonly">
               </td>
               <td></td>
             </tr>
             <tr>
-              <td class="text-center">3</td>
+              <td class=" text-center">3
+              </td>
               <td colspan="3">
                 <div class="container">
                   <div class="row align-items-center">
@@ -4234,15 +4241,15 @@ foreach ($dataAssessmentform4 as $row) {
                     </div>
                     <div class="col-md-2">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" id="t_093_tidak" name="t_093">
-                        <label class="form-check-label" for="t_093_tidak">Tidak</label>
+                        <input class="form-check-input" type="radio" id="t_109_tidak" name="t_109" value="1">
+                        <label class="form-check-label" for="t_109_tidak">Tidak</label>
                       </div>
                     </div>
                     <div class="col-md-3">
                       <div class="row align-items-center">
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" id="t_093_ya" name="t_093">
-                          <label class="form-check-label" for="t_093_ya">Ya</label>
+                          <input class="form-check-input" type="radio" id="t_109_ya" name="t_109" value="2">
+                          <label class="form-check-label" for="t_109_ya">Ya</label>
                         </div>
                       </div>
                     </div>
@@ -4256,8 +4263,8 @@ foreach ($dataAssessmentform4 as $row) {
                         <div class="row align-items-center">
                           <div class="col-3">
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" id="t_094_dm" name="t_094" disabled="disabled">
-                              <label class="form-check-label" for="t_094_dm">DM</label>
+                              <input class="form-check-input" type="checkbox" id="t_110_dm" name="t_110" disabled="disabled" value="1">
+                              <label class="form-check-label" for="t_110_dm">DM</label>
                             </div>
                           </div>
                         </div>
@@ -4266,8 +4273,8 @@ foreach ($dataAssessmentform4 as $row) {
                         <div class="row align-items-center">
                           <div class="col-3">
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" id="t_094_ginjal" name="t_094" disabled="disabled">
-                              <label class="form-check-label" for="t_094_ginjal">Ginjal</label>
+                              <input class="form-check-input" type="checkbox" id="t_111_ginjal" name="t_111" disabled="disabled" value="3">
+                              <label class="form-check-label" for="t_111_ginjal">Ginjal</label>
                             </div>
                           </div>
                         </div>
@@ -4276,8 +4283,8 @@ foreach ($dataAssessmentform4 as $row) {
                         <div class="row align-items-center">
                           <div class="col-3">
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" id="t_094_hati" name="t_094" disabled="disabled">
-                              <label class="form-check-label" for="t_094_hati">Hati</label>
+                              <input class="form-check-input" type="checkbox" id="t_112_hati" name="t_112" disabled="disabled" value="5">
+                              <label class="form-check-label" for="t_112_hati">Hati</label>
                             </div>
                           </div>
                         </div>
@@ -4286,8 +4293,8 @@ foreach ($dataAssessmentform4 as $row) {
                         <div class="row align-items-center">
                           <div class="col-3">
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" id="t_094_paru" name="t_094" disabled="disabled">
-                              <label class="form-check-label" for="t_094_paru">Paru</label>
+                              <input class="form-check-input" type="checkbox" id="t_113_paru" name="t_113" disabled="disabled" value="6">
+                              <label class="form-check-label" for="t_113_paru">Paru</label>
                             </div>
                           </div>
                         </div>
@@ -4296,8 +4303,8 @@ foreach ($dataAssessmentform4 as $row) {
                         <div class="row align-items-center">
                           <div class="col-3">
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" id="t_094_stroke" name="t_094" disabled="disabled">
-                              <label class="form-check-label" for="t_094_stroke">Stroke</label>
+                              <input class="form-check-input" type="checkbox" id="t_114_stroke" name="t_114" disabled="disabled" value="7">
+                              <label class="form-check-label" for="t_114_stroke">Stroke</label>
                             </div>
                           </div>
                         </div>
@@ -4306,8 +4313,8 @@ foreach ($dataAssessmentform4 as $row) {
                         <div class="row align-items-center">
                           <div class="col-3">
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" id="t_094_kanker" name="t_094" disabled="disabled">
-                              <label class="form-check-label" for="t_094_kanker">Kanker</label>
+                              <input class="form-check-input" type="checkbox" id="t_115_kanker" name="t_115" disabled="disabled" value="9">
+                              <label class="form-check-label" for="t_115_kanker">Kanker</label>
                             </div>
                           </div>
                         </div>
@@ -4318,8 +4325,8 @@ foreach ($dataAssessmentform4 as $row) {
                         <div class="row align-items-center">
                           <div class="col-3">
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" id="t_094_geriatri" name="t_094" disabled="disabled">
-                              <label class="form-check-label" for="t_094_geriatri">Geriatri</label>
+                              <input class="form-check-input" type="checkbox" id="t_116_geriatri" name="t_116" disabled="disabled" value="2">
+                              <label class="form-check-label" for="t_116_geriatri">Geriatri</label>
                             </div>
                           </div>
                         </div>
@@ -4328,8 +4335,8 @@ foreach ($dataAssessmentform4 as $row) {
                         <div class="row align-items-center">
                           <div class="col-3">
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" id="t_094_jantung" name="t_094" disabled="disabled">
-                              <label class="form-check-label" for="t_094_jantung">Jantung</label>
+                              <input class="form-check-input" type="checkbox" id="t_117_jantung" name="t_117" disabled="disabled" value="4">
+                              <label class="form-check-label" for="t_117_jantung">Jantung</label>
                             </div>
                           </div>
                         </div>
@@ -4338,8 +4345,8 @@ foreach ($dataAssessmentform4 as $row) {
                         <div class="row align-items-center">
                           <div class="col-5">
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" id="t_094_lainnya" name="t_094" disabled="disabled">
-                              <label class="form-check-label" for="t_094_lainnya">Lain-Lain</label>
+                              <input class="form-check-input" type="checkbox" id="t_118_lainnya" name="t_118" disabled="disabled" value="10">
+                              <label class="form-check-label" for="t_118_lainnya">Lain-Lain</label>
                             </div>
                           </div>
                           <div class="col-6">
@@ -4351,8 +4358,8 @@ foreach ($dataAssessmentform4 as $row) {
                         <div class="row align-items-center">
                           <div class="col-12">
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox" id="t_094_imun" name="t_094" disabled="disabled">
-                              <label class="form-check-label" for="t_094_imun">Penurunan Imunitas</label>
+                              <input class="form-check-input" type="checkbox" id="t_119_imun" name="t_119" disabled="disabled" value="8">
+                              <label class="form-check-label" for="t_119_imun">Penurunan Imunitas</label>
                             </div>
                           </div>
                         </div>
@@ -4399,20 +4406,21 @@ foreach ($dataAssessmentform4 as $row) {
             </div>
 
             <div class="col-2">
-              <input class="form-check-input" type="radio" id="t_096_mandiri" name="t_096" value="Mandiri">
-              <label class="form-check-label" for="t_096_mandiri">Mandiri</label>
+              <input class="form-check-input" type="radio" id="t_120_mandiri" name="t_120" value="1">
+              <label class="form-check-label" for="t_120_mandiri">Mandiri</label>
             </div>
 
             <div class="col-2">
-              <input class="form-check-input" type="radio" id="t_096_dibantu" name="t_096" value="Dibantu">
-              <label class="form-check-label" for="t_096_dibantu">Dibantu</label>
+              <input class="form-check-input" type="radio" id="t_120_dibantu" name="t_120" value="2">
+              <label class="form-check-label" for="t_120_dibantu">Dibantu</label>
             </div>
 
             <div class="col-3">
-              <input class="form-check-input" type="radio" id="t_096_ketergantungan" name="t_096" value="Ketergantungan Penuh">
-              <label class="form-check-label" for="t_096_ketergantungan">Ketergantungan Penuh</label>
+              <input class="form-check-input" type="radio" id="t_120_ketergantungan" name="t_120" value="3">
+              <label class="form-check-label" for="t_120_ketergantungan">Ketergantungan Penuh</label>
             </div>
           </div>
+
           <div class="row align-items-center">
 
 
@@ -4421,20 +4429,21 @@ foreach ($dataAssessmentform4 as $row) {
             </div>
 
             <div class="col-2">
-              <input class="form-check-input" type="radio" id="t_097_mandiri" name="t_097" value="Mandiri">
-              <label class="form-check-label" for="t_097_mandiri">Mandiri</label>
+              <input class="form-check-input" type="radio" id="t_121_mandiri" name="t_121" value="1">
+              <label class="form-check-label" for="t_121_mandiri">Mandiri</label>
             </div>
 
             <div class="col-2">
-              <input class="form-check-input" type="radio" id="t_097_dibantu" name="t_097" value="Dibantu">
-              <label class="form-check-label" for="t_097_dibantu">Dibantu</label>
+              <input class="form-check-input" type="radio" id="t_121_dibantu" name="t_121" value="2">
+              <label class="form-check-label" for="t_121_dibantu">Dibantu</label>
             </div>
 
             <div class="col-3">
-              <input class="form-check-input" type="radio" id="t_097_ketergantungan" name="t_097" value="Ketergantungan Penuh">
-              <label class="form-check-label" for="t_097_ketergantungan">Ketergantungan Penuh</label>
+              <input class="form-check-input" type="radio" id="t_121_ketergantungan" name="t_121" value="3">
+              <label class="form-check-label" for="t_121_ketergantungan">Ketergantungan Penuh</label>
             </div>
           </div>
+
           <div class="row align-items-center">
 
 
@@ -4443,18 +4452,18 @@ foreach ($dataAssessmentform4 as $row) {
             </div>
 
             <div class="col-2">
-              <input class="form-check-input" type="radio" id="t_098_mandiri" name="t_098" value="Mandiri">
-              <label class="form-check-label" for="t_098_mandiri">Mandiri</label>
+              <input class="form-check-input" type="radio" id="t_122_mandiri" name="t_122" value="1">
+              <label class="form-check-label" for="t_122_mandiri">Mandiri</label>
             </div>
 
             <div class="col-2">
-              <input class="form-check-input" type="radio" id="t_098_dibantu" name="t_098" value="Dibantu">
-              <label class="form-check-label" for="t_098_dibantu">Dibantu</label>
+              <input class="form-check-input" type="radio" id="t_122_dibantu" name="t_122" value="2">
+              <label class="form-check-label" for="t_122_dibantu">Dibantu</label>
             </div>
 
             <div class="col-3">
-              <input class="form-check-input" type="radio" id="t_098_ketergantungan" name="t_098" value="Ketergantungan Penuh">
-              <label class="form-check-label" for="t_098_ketergantungan">Ketergantungan Penuh</label>
+              <input class="form-check-input" type="radio" id="t_122_ketergantungan" name="t_122" value="3">
+              <label class="form-check-label" for="t_122_ketergantungan">Ketergantungan Penuh</label>
             </div>
           </div>
           <div class="row align-items-center">
@@ -4465,18 +4474,18 @@ foreach ($dataAssessmentform4 as $row) {
             </div>
 
             <div class="col-2">
-              <input class="form-check-input" type="radio" id="t_099_mandiri" name="t_099" value="Mandiri">
-              <label class="form-check-label" for="t_099_mandiri">Mandiri</label>
+              <input class="form-check-input" type="radio" id="t_123_mandiri" name="t_123" value="1">
+              <label class="form-check-label" for="t_123_mandiri">Mandiri</label>
             </div>
 
             <div class="col-2">
-              <input class="form-check-input" type="radio" id="t_099_dibantu" name="t_099" value="Dibantu">
-              <label class="form-check-label" for="t_099_dibantu">Dibantu</label>
+              <input class="form-check-input" type="radio" id="t_123_dibantu" name="t_123" value="2">
+              <label class="form-check-label" for="t_123_dibantu">Dibantu</label>
             </div>
 
             <div class="col-3">
-              <input class="form-check-input" type="radio" id="t_099_ketergantungan" name="t_099" value="Ketergantungan Penuh">
-              <label class="form-check-label" for="t_099_ketergantungan">Ketergantungan Penuh</label>
+              <input class="form-check-input" type="radio" id="t_123_ketergantungan" name="t_123" value="3">
+              <label class="form-check-label" for="t_123_ketergantungan">Ketergantungan Penuh</label>
             </div>
           </div>
           <div class="row align-items-center">
@@ -4487,18 +4496,18 @@ foreach ($dataAssessmentform4 as $row) {
             </div>
 
             <div class="col-2">
-              <input class="form-check-input" type="radio" id="t_100_mandiri" name="t_100" value="Mandiri">
-              <label class="form-check-label" for="t_100_mandiri">Mandiri</label>
+              <input class="form-check-input" type="radio" id="t_124_mandiri" name="t_124" value="1">
+              <label class="form-check-label" for="t_124_mandiri">Mandiri</label>
             </div>
 
             <div class="col-2">
-              <input class="form-check-input" type="radio" id="t_100_dibantu" name="t_100" value="Dibantu">
-              <label class="form-check-label" for="t_100_dibantu">Dibantu</label>
+              <input class="form-check-input" type="radio" id="t_124_dibantu" name="t_124" value="2">
+              <label class="form-check-label" for="t_124_dibantu">Dibantu</label>
             </div>
 
             <div class="col-3">
-              <input class="form-check-input" type="radio" id="t_100_ketergantungan" name="t_100" value="Ketergantungan Penuh">
-              <label class="form-check-label" for="t_100_ketergantungan">Ketergantungan Penuh</label>
+              <input class="form-check-input" type="radio" id="t_124_ketergantungan" name="t_124" value="3">
+              <label class="form-check-label" for="t_124_ketergantungan">Ketergantungan Penuh</label>
             </div>
         </td>
       </tr>
@@ -4521,7 +4530,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td class="text-center">25</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input jumlah2" type="radio" id="t_101_ya" name="t_101" value="25">
+                  <input class="form-check-input jumlah2" type="radio" id="t_125_ya" name="t_125" value="25">
                 </div>
               </td>
             </tr>
@@ -4532,7 +4541,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td class="text-center">0</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input jumlah2" type="radio" id="t_101_tidak" name="t_101" value="0">
+                  <input class="form-check-input jumlah2" type="radio" id="t_125_tidak" name="t_125" value="0">
                 </div>
               </td>
             </tr>
@@ -4542,7 +4551,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td>Ya</td>
               <td class="text-center">15</td>
               <td>
-                <input class="form-check-input jumlah2" type="radio" id="t_102_ya" name="t_102" value="15">
+                <input class="form-check-input jumlah2" type="radio" id="t_126_ya" name="t_126" value="15">
               </td>
             </tr>
 
@@ -4551,7 +4560,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td>Tidak</td>
               <td class="text-center">0</td>
               <td>
-                <input class="form-check-input jumlah2" type="radio" id="t_102_tidak" name="t_102" value="0">
+                <input class="form-check-input jumlah2" type="radio" id="t_126_tidak" name="t_126" value="0">
               </td>
             </tr>
 
@@ -4560,7 +4569,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td>Berpegangan pada perabot</td>
               <td class="text-center">30</td>
               <td>
-                <input class="form-check-input jumlah2" type="radio" id="t_102_berpegangan" name="t_102" value="30">
+                <input class="form-check-input jumlah2" type="radio" id="t_126_berpegangan" name="t_126" value="30">
               </td>
             </tr>
 
@@ -4569,7 +4578,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td>Tongkat/alat penopang</td>
               <td class="text-center">15</td>
               <td>
-                <input class="form-check-input jumlah2" type="radio" id="t_103_tongkat" name="t_103" value="15">
+                <input class="form-check-input jumlah2" type="radio" id="t_127_tongkat" name="t_127" value="15">
               </td>
             </tr>
 
@@ -4578,7 +4587,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td>Tidak ada/kursi roda/perawat/tirah baring</td>
               <td class="text-center">0</td>
               <td>
-                <input class="form-check-input jumlah2" type="radio" id="t_103_tidak" name="t_103" value="0">
+                <input class="form-check-input jumlah2" type="radio" id="t_127_tidak" name="t_127" value="0">
               </td>
             </tr>
 
@@ -4587,7 +4596,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td>Ya</td>
               <td class="text-center">20</td>
               <td>
-                <input class="form-check-input jumlah2" type="radio" id="t_104_ya" name="t_104" value="20">
+                <input class="form-check-input jumlah2" type="radio" id="t_128_ya" name="t_128" value="20">
               </td>
             </tr>
 
@@ -4596,7 +4605,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td>Tidak</td>
               <td class="text-center">0</td>
               <td>
-                <input class="form-check-input jumlah2" type="radio" id="t_104_tidak" name="t_104" value="0">
+                <input class="form-check-input jumlah2" type="radio" id="t_128_tidak" name="t_128" value="0">
               </td>
             </tr>
 
@@ -4605,7 +4614,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td>Terganggu</td>
               <td class="text-center">20</td>
               <td>
-                <input class="form-check-input jumlah2" type="radio" id="t_105_terganggu" name="t_105" value="20">
+                <input class="form-check-input jumlah2" type="radio" id="t_129_terganggu" name="t_129" value="20">
               </td>
             </tr>
 
@@ -4614,7 +4623,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td>Lemah</td>
               <td class="text-center">0</td>
               <td>
-                <input class="form-check-input jumlah2" type="radio" id="t_105_lemah" name="t_105" value="0">
+                <input class="form-check-input jumlah2" type="radio" id="t_129_lemah" name="t_129" value="0">
               </td>
             </tr>
 
@@ -4623,7 +4632,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td>Normal/tirah baring/imobilisasi</td>
               <td class="text-center">0</td>
               <td>
-                <input class="form-check-input jumlah2" type="radio" id="t_105_normal" name="t_105" value="0">
+                <input class="form-check-input jumlah2" type="radio" id="t_129_normal" name="t_129" value="0">
               </td>
             </tr>
 
@@ -4632,7 +4641,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td>Sering lupa akan keterbatasan yang dimiliki</td>
               <td class="text-center">15</td>
               <td>
-                <input class="form-check-input jumlah2" type="radio" id="t_106_lupa" name="t_106" value="15">
+                <input class="form-check-input jumlah2" type="radio" id="t_130_lupa" name="t_130" value="15">
               </td>
             </tr>
 
@@ -4641,7 +4650,7 @@ foreach ($dataAssessmentform4 as $row) {
               <td>Sadar akan kemampuan diri</td>
               <td class="text-center">0</td>
               <td>
-                <input class="form-check-input jumlah2" type="radio" id="t_106_sadar" name="t_106" value="0">
+                <input class="form-check-input jumlah2" type="radio" id="t_130_sadar" name="t_130" value="0">
               </td>
             </tr>
 
@@ -4654,19 +4663,19 @@ foreach ($dataAssessmentform4 as $row) {
 
                   <div class="row align-items-center">
                     <div class="col-3">
-                      <input class="form-check-input" type="radio" id="t_108_tidakberisiko" name="t_108" value="0-24 Tidak berisiko">
-                      <label class="form-check-label" for="t_108_tidakberisiko">0-24 Tidak berisiko</label>
+                      <input class="form-check-input" type="radio" id="t_131_tidakberisiko" name="t_131" value="1">
+                      <label class="form-check-label" for="t_131_tidakberisiko">0-24 Tidak berisiko</label>
                     </div>
                     <div class="col-3">
-                      <input class="form-check-input" type="radio" id="t_108_rendahberisiko" name="t_108" value="25-50 Rendah berisiko">
-                      <label class="form-check-label" for="t_108_rendahberisiko">25-50 Rendah berisiko</label>
+                      <input class="form-check-input" type="radio" id="t_131_rendahberisiko" name="t_131" value="2">
+                      <label class="form-check-label" for="t_131_rendahberisiko">25-50 Rendah berisiko</label>
                     </div>
                   </div>
 
                   <div class="row align-items-center">
                     <div class="col-3">
-                      <input class="form-check-input" type="radio" id="t_108_risikotinggi" name="t_108" value="50 Risiko tinggi">
-                      <label class="form-check-label" for="t_108_risikotinggi">> 50 Risiko tinggi</label>
+                      <input class="form-check-input" type="radio" id="t_131_risikotinggi" name="t_131" value="3">
+                      <label class="form-check-label" for="t_131_risikotinggi">> 50 Risiko tinggi</label>
                     </div>
                   </div>
                 </div>
@@ -4692,48 +4701,48 @@ foreach ($dataAssessmentform4 as $row) {
           <div class="row align-items-center">
             <label>Hambatan Pembelajaran:</label>
             <div class="col-3">
-              <input class="form-check-input" type="radio" id="t_110_tidakada" name="t_110">
-              <label class="form-check-label" for="t_110_tidakada">Tidak ada</label>
+              <input class="form-check-input" type="radio" id="t_132_tidakada" name="t_132" value="1">
+              <label class="form-check-label" for="t_132_tidakada">Tidak ada</label>
             </div>
             <div class="col-3">
-              <input class="form-check-input" type="checkbox" id="t_109_pendengaran" name="t_109" disabled="disabled">
-              <label class="form-check-label" for="t_109_pendengaran">Pendengaran</label>
+              <input class="form-check-input" type="checkbox" id="t_133_pendengaran" name="t_133" disabled="disabled" value="1">
+              <label class="form-check-label" for="t_133_pendengaran">Pendengaran</label>
             </div>
             <div class="col-3">
-              <input class="form-check-input" type="checkbox" id="t_109_penglihatan" name="t_109" disabled="disabled">
-              <label class="form-check-label" for="t_109_penglihatan">Penglihatan</label>
+              <input class="form-check-input" type="checkbox" id="t_134_penglihatan" name="t_134" disabled="disabled" value="2">
+              <label class="form-check-label" for="t_134_penglihatan">Penglihatan</label>
             </div>
             <div class="col-3">
-              <input class="form-check-input" type="checkbox" id="t_109_kognitif" name="t_109" disabled="disabled">
-              <label class="form-check-label" for="t_109_kognitif">Kognitif</label>
+              <input class="form-check-input" type="checkbox" id="t_135_kognitif" name="t_135" disabled="disabled" value="3">
+              <label class="form-check-label" for="t_135_kognitif">Kognitif</label>
             </div>
           </div>
 
           <div class="row align-items-center">
             <div class="col-3">
-              <input class="form-check-input" type="radio" id="t_110_ya" name="t_110" value="Ya">
-              <label class="form-check-label" for="t_110_ya">Ya</label>
+              <input class="form-check-input" type="radio" id="t_132_ya" name="t_132" value="2">
+              <label class="form-check-label" for="t_132_ya">Ya</label>
             </div>
             <div class="col-3">
-              <input class="form-check-input" type="checkbox" id="t_109_emosi" name="t_109" disabled="disabled">
-              <label class="form-check-label" for="t_109_emosi">Emosi</label>
+              <input class="form-check-input" type="checkbox" id="t_136_emosi" name="t_136" disabled="disabled" value="4">
+              <label class="form-check-label" for="t_136_emosi">Emosi</label>
             </div>
             <div class="col-3">
-              <input class="form-check-input" type="checkbox" id="t_109_budaya" name="t_109" disabled="disabled">
-              <label class="form-check-label" for="t_109_budaya">Budaya/kepercayaan</label>
+              <input class="form-check-input" type="checkbox" id="t_137_budaya" name="t_137" disabled="disabled" value="5">
+              <label class="form-check-label" for="t_137_budaya">Budaya/kepercayaan</label>
             </div>
             <div class="col-3">
-              <input class="form-check-input" type="checkbox" id="t_109_bahasa" name="t_109" disabled="disabled">
-              <label class="form-check-label" for="t_109_bahasa">Bahasa</label>
+              <input class="form-check-input" type="checkbox" id="t_138_bahasa" name="t_138" disabled="disabled" value="6">
+              <label class="form-check-label" for="t_138_bahasa">Bahasa</label>
             </div>
           </div>
 
-          <div class="row">
+          <div class="row align-items-center">
             <div class="col-3"></div>
             <div class="col-md-6 row mb-3">
               <div class="col-3 col-form-label">
-                <input class="form-check-input" type="checkbox" id="t_109_lainnya" name="t_109" disabled="disabled">
-                <label class="form-check-label" for="t_109_lainnya">Lain-lain</label>
+                <input class="form-check-input" type="checkbox" id="t_139_lainnya" name="t_139" disabled="disabled" value="7">
+                <label class="form-check-label" for="t_139_lainnya">Lain-lain</label>
               </div>
               <div class="col-4">
                 <input class="form-control" type="text" id="v_34" name="v_34" disabled="disabled">
@@ -4746,47 +4755,47 @@ foreach ($dataAssessmentform4 as $row) {
           <div class="row align-items-center mt-2">
             <label>Edukasi yang Diperlukan:</label>
             <div class="col-3">
-              <input class="form-check-input" type="checkbox" id="t_111_stimulasi" name="t_111">
-              <label class="form-check-label" for="t_111_stimulasi">Stimulasi tumbuh kembang</label>
+              <input class="form-check-input" type="checkbox" id="t_140_stimulasi" name="t_140" value="1">
+              <label class="form-check-label" for="t_140_stimulasi">Stimulasi tumbuh kembang</label>
             </div>
             <div class="col-3">
-              <input class="form-check-input" type="checkbox" id="t_111_nutrisi" name="t_111">
-              <label class="form-check-label" for="t_111_nutrisi">Nutrisi</label>
+              <input class="form-check-input" type="checkbox" id="t_141_nutrisi" name="t_141" value="2">
+              <label class="form-check-label" for="t_141_nutrisi">Nutrisi</label>
             </div>
             <div class="col-3">
-              <input class="form-check-input" type="checkbox" id="t_111_perawatanluka" name="t_111">
-              <label class="form-check-label" for="t_111_perawatanluka">Perawatan luka</label>
+              <input class="form-check-input" type="checkbox" id="t_142_perawatanluka" name="t_142" value="3">
+              <label class="form-check-label" for="t_142_perawatanluka">Perawatan luka</label>
             </div>
           </div>
 
           <div class="row align-items-center">
             <div class="col-3">
-              <input class="form-check-input" type="checkbox" id="t_111_perawatanstoma" name="t_111">
-              <label class="form-check-label" for="t_111_perawatanstoma">Perawatan stoma</label>
+              <input class="form-check-input" type="checkbox" id="t_143_perawatanstoma" name="t_143" value="4">
+              <label class="form-check-label" for="t_143_perawatanstoma">Perawatan stoma</label>
             </div>
             <div class="col-3">
-              <input class="form-check-input" type="checkbox" id="t_111_manajemennyeri" name="t_111">
-              <label class="form-check-label" for="t_111_manajemennyeri">Manajemen nyeri</label>
+              <input class="form-check-input" type="checkbox" id="t_144_manajemennyeri" name="t_144" value="5">
+              <label class="form-check-label" for="t_144_manajemennyeri">Manajemen nyeri</label>
             </div>
             <div class="col-3">
-              <input class="form-check-input" type="checkbox" id="t_111_medikasi" name="t_111">
-              <label class="form-check-label" for="t_111_medikasi">Medikasi</label>
+              <input class="form-check-input" type="checkbox" id="t_145_medikasi" name="t_145" value="6">
+              <label class="form-check-label" for="t_145_medikasi">Medikasi</label>
             </div>
           </div>
 
           <div class="row">
             <div class="col-3">
-              <input class="form-check-input" type="checkbox" id="t_111_rehabilitasi" name="t_111">
-              <label class="form-check-label" for="t_111_rehabilitasi">Rehabilitasi</label>
+              <input class="form-check-input" type="checkbox" id="t_146_rehabilitasi" name="t_146" value="7">
+              <label class="form-check-label" for="t_146_rehabilitasi">Rehabilitasi</label>
             </div>
             <div class="col-3">
-              <input class="form-check-input" type="checkbox" id="t_111_jaminanfinansial" name="t_111">
-              <label class="form-check-label" for="t_111_jaminanfinansial">Jaminan finansial</label>
+              <input class="form-check-input" type="checkbox" id="t_147_jaminanfinansial" name="t_147" value="8">
+              <label class="form-check-label" for="t_147_jaminanfinansial">Jaminan finansial</label>
             </div>
             <div class="col-md-6 row mb-3">
               <div class="col-3 col-form-label">
-                <input class="form-check-input" type="checkbox" id="t_111_lainnya" name="t_111">
-                <label class="form-check-label" for="t_111_lainnya">Lain-lain</label>
+                <input class="form-check-input" type="checkbox" id="t_148_lainnya" name="t_148" value="9">
+                <label class="form-check-label" for="t_148_lainnya">Lain-lain</label>
               </div>
               <div class="col-4">
                 <input class="form-control" type="text" name="v_69" id="v_69" disabled="disabled">
@@ -4823,23 +4832,23 @@ foreach ($dataAssessmentform4 as $row) {
               <td>Pasien dengan kognitif rendah</td>
               <td>
                 <div class="radio">
-                  <input class="form-check-input" type="radio" id="t_112_ya" name="t_112" value="Ya">
+                  <input class="form-check-input" type="radio" id="t_149_ya" name="t_149" value="1">
                 </div>
               </td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_112_tidak" name="t_112" value="Tidak">
+                  <input class="form-check-input" type="radio" id="t_149_tidak" name="t_149" value="2">
                 </div>
               </td>
               <td>Riwayat gangguan mental, bunuh diri, dll</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_118_ya" name="t_118" value="Ya">
+                  <input class="form-check-input" type="radio" id="t_150_ya" name="t_150" value="1">
                 </div>
               </td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_118_tidak" name="t_118" value="Tidak">
+                  <input class="form-check-input" type="radio" id="t_150_tidak" name="t_150" value="2">
                 </div>
               </td>
             </tr>
@@ -4847,23 +4856,23 @@ foreach ($dataAssessmentform4 as $row) {
               <td>Pasien dengan resiko tinggi</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_113_ya" name="t_113" value="Ya">
+                  <input class="form-check-input" type="radio" id="t_151_ya" name="t_151" value="1">
                 </div>
               </td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_113_tidak" name="t_113" value="Tidak">
+                  <input class="form-check-input" type="radio" id="t_151_tidak" name="t_151" value="2">
                 </div>
               </td>
               <td>Pasien redmisi RS dlm 1 bulan diagnose sama</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_119_ya" name="t_119" value="Ya">
+                  <input class="form-check-input" type="radio" id="t_152_ya" name="t_152" value="1">
                 </div>
               </td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_119_tidak" name="t_119" value="Tidak">
+                  <input class="form-check-input" type="radio" id="t_152_tidak" name="t_152" value="2">
                 </div>
               </td>
             </tr>
@@ -4871,23 +4880,23 @@ foreach ($dataAssessmentform4 as $row) {
               <td>Kasus dengan penyakit kronik > 1 diagnosa</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_114_ya" name="t-114" value="Ya">
+                  <input class="form-check-input" type="radio" id="t_153_ya" name="t_153" value="1">
                 </div>
               </td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_114_tidak" name="t-114" value="Tidak">
+                  <input class="form-check-input" type="radio" id="t_153_tidak" name="t_153" value="2">
                 </div>
               </td>
               <td>Perkiraan asuhan dengan biaya finansial tinggi</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_120_ya" name="t_120" value="Ya">
+                  <input class="form-check-input" type="radio" id="t_154_ya" name="t_154" value="1">
                 </div>
               </td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_120_tidak" name="t_120" value="Tidak">
+                  <input class="form-check-input" type="radio" id="t_154_tidak" name="t_154" value="2">
                 </div>
               </td>
             </tr>
@@ -4895,23 +4904,23 @@ foreach ($dataAssessmentform4 as $row) {
               <td>Status fungsional rendah, kebutuhan ADL tinggi</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_115_ya" name="t_115" value="Ya">
+                  <input class="form-check-input" type="radio" id="t_155_ya" name="t_155" value="1">
                 </div>
               </td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_115_tidak" name="t_115" value="Tidak">
+                  <input class="form-check-input" type="radio" id="t_155_tidak" name="t_155" value="2">
                 </div>
               </td>
               <td>Kasus yang melebihi rata rata hari rawat</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_121_ya" name="t_121" value="Ya">
+                  <input class="form-check-input" type="radio" id="t_156_ya" name="t_156" value="1">
                 </div>
               </td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_121_tidak" name="t_121" value="Tidak">
+                  <input class="form-check-input" type="radio" id="t_156_tidak" name="t_156" value="2">
                 </div>
               </td>
             </tr>
@@ -4919,52 +4928,52 @@ foreach ($dataAssessmentform4 as $row) {
               <td>Pasien dgn Riwayat penggunaan peralatan medis</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_116_ya" name="t_116" value="Ya">
+                  <input class="form-check-input" type="radio" id="t_157_ya" name="t_157" value="1">
                 </div>
               </td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_116_tidak" name="t_116" value="Tidak">
+                  <input class="form-check-input" type="radio" id="t_157_tidak" name="t_157" value="2">
                 </div>
               </td>
               <td>Pasien dengan komplain tinggi</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_122_ya" name="t_122" value="Ya">
+                  <input class="form-check-input" type="radio" id="t_158_ya" name="t_158" value="1">
                 </div>
               </td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_122_tidak" name="t_122" value="Tidak">
+                  <input class="form-check-input" type="radio" id="t_158_tidak" name="t_158" value="2">
                 </div>
               </td>
             </tr>
             <tr>
               <td>Dirujuk ke
-                <input class="form-check-input" type="checkbox" id="t_124_dirujuk" name="t_124">
+                <input class="form-check-input" type="checkbox" id="t_159_dirujuk" name="t_159" value="1">
                 <div class="input">
                   <input class="form-control" type="text" name="v_70" id="v_70" disabled="disabled">
                 </div>
               </td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_117_ya" name="t_117" value="Ya" disabled="disabled">
+                  <input class="form-check-input" type="radio" id="t_160_ya" name="t_160" value="1" disabled="disabled">
                 </div>
               </td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_117_tidak" name="t_117" value="Tidak" disabled="disabled">
+                  <input class="form-check-input" type="radio" id="t_160_tidak" name="t_160" value="2" disabled="disabled">
                 </div>
               </td>
               <td>Pasien butuh kotinuitas pelayanan</td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_123_ya" name="t_123" value="Ya">
+                  <input class="form-check-input" type="radio" id="t_161_ya" name="t_161" value="1">
                 </div>
               </td>
               <td>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" id="t_123_tidak" name="t_123" value="Tidak">
+                  <input class="form-check-input" type="radio" id="t_161_tidak" name="t_161" value="2">
                 </div>
               </td>
             </tr>

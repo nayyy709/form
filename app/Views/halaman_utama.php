@@ -33,11 +33,6 @@
         }
     </style>
 
-
-
-
-    <!-- Custom styles for this template -->
-
 </head>
 
 <body>
@@ -48,64 +43,110 @@
 
     <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
 
+
+
     <div class="container mt-5" style="margin: auto;">
 
-        <div class="row align-items-center">
-            <div class="col-md-3">
-                <div class="card" style="width: 15rem;" align="center">
-                    <img src="<?= base_url('uploads/formicon.png') ?>" class="card-img-top" alt="" width="159px" height="221px">
-                    <div class="card-body">
-                        <h5 class="card-title">Form Persetujuan Tindakan Kedokteran</h5>
+
+        <div class="col-xl-3 col-md-12 mb-4">
+            <div class="card border border-5 border-success border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1"><a class="card-title" style="text-decoration:none" href="<?= site_url('formulir/datapasien') ?>">Tambah Data Formulir</a></div>
+                        </div>
                         <br>
                         <br>
-                        <br>
-                        <a href="<?= site_url('formulir/form1') ?>" class="btn btn-dark">Go to Form 1</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card" style="width: 15rem;" align="center">
-                    <img src="<?= base_url('uploads/formicon.png') ?>" class="card-img-top" alt="" width="159px" height="221px">
-                    <div class="card-body">
-                        <h5 class="card-title">Form Pengkajian Pra Bedah</h5>
-                        <br>
-                        <br>
-                        <br>
-                        <a href="<?= site_url('formulir/form2') ?>" class="btn btn-dark ">Go to Form 2</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card" style="width: 15rem;" align="center">
-                    <img src="<?= base_url('uploads/formicon.png') ?>" class="card-img-top" alt="" width="159px" height="221px">
-                    <div class="card-body">
-                        <h5 class="card-title">Infrom Consent</h5>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <a href="<?= site_url('formulir/form3') ?>" class="btn btn-dark ">Go to Form 3</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card" style="width: 15rem;" align="center">
-                    <img src="<?= base_url('uploads/formicon.png') ?>" class="card-img-top" alt="" width="159px" height="221px">
-                    <div class="card-body">
-                        <h5 class="card-title">Form Pengkajian Awal Keperawatan dan Medis Pasien Rawat Inap Dewasa</h5>
-                        <br>
-                        <a href="<?= site_url('formulir/form4') ?>" class="btn btn-dark ">Go to Form 4</a>
+                        <div class="col-auto">
+                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+        <!-- CARD1 -->
+        <div class="row">
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border border-5 border-success border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1"><a class="card-title" style="text-decoration:none" href="<?= site_url('home/form1') ?>">Form Persetujuan Tindakan Kedokteran</a></div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="col-auto">
+                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD2 -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border border-5 border-success border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1"><a class="card-title" style="text-decoration:none" href="<?= site_url('home/form2') ?>">Form Pengkajian Pra Bedah</a></div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="col-auto">
+                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD3 -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border border-5 border-success border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1"><a class="card-title" style="text-decoration:none" href="<?= site_url('home/form3') ?>">Inform Consent</a></div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="col-auto">
+                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD4 -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border border-5 border-success border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1"><a class="card-title" style="text-decoration:none" href="<?= site_url('home/form4') ?>">Form Pengkajian Awal Keperawatan dan Medis Pasien Rawat Inap Dewasa</a></div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="col-auto">
+                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
 
 
 
-
 </body>
+
 
 </html>
